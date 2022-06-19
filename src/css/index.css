@@ -24,7 +24,7 @@ header {
   background: linear-gradient(to right, #f0f881, #f5f77c);
   border-radius: 17px 17px 0px 0px;
   border: 2px solid rgb(63, 63, 63);
-  box-shadow: 0rem -2rem 0rem rgb(255, 255, 255);
+  box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
   position: fixed;
 }
 
@@ -175,7 +175,7 @@ header {
   background: linear-gradient(to right, #f0f881, #f5f77c);
   border-radius: 17px 17px 0px 0px;
   border: 2px solid rgb(63, 63, 63);
-  box-shadow: 0rem -2rem 0rem rgb(255, 255, 255);
+  box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
   position: fixed;
 }
 
