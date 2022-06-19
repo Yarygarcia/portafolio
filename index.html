@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Yary García</title>
-</head>
-<body>
-    <header>
-        <div><img style="margin-right:8px;" src="https://img.icons8.com/wired/26/000000/delete-sign.png"/></div>
-        <div> <img src="https://img.icons8.com/carbon-copy/28/000000/resize-diagonal.png"/></div>
-        <div><img src="https://img.icons8.com/carbon-copy/28/000000/minimize-window.png"/></div>
-    </header>    
-    <div class="contenedor">
-
-
-        <nav>
-            <ul>
-                <li>
-                    <img src="https://img.icons8.com/small/30/000000/home.png"/>
-                    <a href="">
-                        Inicio
-                    </a> 
-                </li>
-                <li>
-                    <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/37/000000/external-skill-human-resource-itim2101-lineal-itim2101.png"/>
-                    <a href="">
-                        Skill
-                    </a>
-                </li>
-                <li>
-                    <img src="https://img.icons8.com/ios/35/000000/export-pdf--v1.png"/>
-                    <a href=""> 
-                        Cv
-                    </a>
-                </li>
-                <li>
-                    <img src="https://img.icons8.com/ios/35/000000/programming.png"/>
-                    <a href="">
-                        Proyectos
-                    </a>
-                </li>
-            </ul>
-            
-        </nav>
-        <section>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/src/css/index.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <title>Yary García</title>
+  </head>
+  <body>
+      <header>
+          <div><img style="margin-right:8px;" src="https://img.icons8.com/wired/26/000000/delete-sign.png"/></div>
+          <div> <img src="https://img.icons8.com/carbon-copy/28/000000/resize-diagonal.png"/></div>
+          <div><img src="https://img.icons8.com/carbon-copy/28/000000/minimize-window.png"/></div>
+      </header>   
+      <nav>
+        <ul>
+            <li>
+                <img src="https://img.icons8.com/small/30/000000/home.png"/>
+                <a href="#home">
+                    Home
+                </a> 
+            </li>
+            <li>
+                <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/37/000000/external-skill-human-resource-itim2101-lineal-itim2101.png"/>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+            <li>
+              <img src="https://img.icons8.com/ios/35/000000/programming.png"/>
+              <a href="">
+                Projects
+              </a>
+            </li>
+            <li>
+                <img src="https://img.icons8.com/ios/35/000000/export-pdf--v1.png"/>
+                <a href="./src/doc/CV-yary-garcia.pdf" download="CV-yary-garcia.pdf"> 
+                    Cv
+                </a>
+            </li>
+        </ul>
+      </nav> 
+      <div id="contenedor">
+        <div id="home">
+          <section class="me">
             <!-- <img src="./imagenes/./cuadro.jpeg" alt=""> -->
             <!-- <img src="./imagenes/WhatsApp_Image_2022-05-25_at_10.41.07_AM-removebg-preview.png" alt="" title="primera"> -->
             <!-- <img src="./imagenes/zyro-image.png" alt="" title="ziro"> -->
@@ -61,58 +59,106 @@
                 <h1>¡Bienvenid@ a mi portafolio!</h1>
                 <p>Soy Yary Garc&iacutea <br> Desarrolladora front-end</p>
             </div> 
-            
-        </section>
-        <main>
-            <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./imagenes/azul.jpeg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./imagenes/me_informal.png" class="d-block w-90" alt="..." height="330px">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./imagenes/me_elegant.png" class="d-block w-90" alt="..."  height="330px">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div> -->
-        </main>
-    
-        <footer>
-            <a href="">
-                <img src="https://img.icons8.com/material-outlined/40/000000/github.png" title="Github" alt="github"/>
-            </a>
-            <a href="">
-                <img src="https://img.icons8.com/color/40/000000/linkedin.png" title="Linkedin" alt="linkedin"/>
-            </a>
-        </footer> 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+          </section>
+          <main>
+               <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                   <div class="carousel-indicators">
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                   </div>
+                   <div class="carousel-inner">
+                     <div class="carousel-item active">
+                       <img src="./imagenes/azul.jpeg" class="d-block w-100" alt="...">
+                       <div class="carousel-caption d-none d-md-block">
+                         <h5>First slide label</h5>
+                         <p>Some representative placeholder content for the first slide.</p>
+                       </div>
+                     </div>
+                     <div class="carousel-item">
+                       <img src="./imagenes/me_informal.png" class="d-block w-90" alt="..." height="330px">
+                       <div class="carousel-caption d-none d-md-block">
+                         <h5>Second slide label</h5>
+                         <p>Some representative placeholder content for the second slide.</p>
+                       </div>
+                     </div>
+                     <div class="carousel-item">
+                       <img src="./imagenes/me_elegant.png" class="d-block w-90" alt="..."  height="330px">
+                       <div class="carousel-caption d-none d-md-block">
+                         <h5>Third slide label</h5>
+                         <p>Some representative placeholder content for the third slide.</p>
+                       </div>
+                     </div>
+                   </div>
+                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Previous</span>
+                   </button>
+                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Next</span>
+                   </button>
+                 </div> -->
+          </main>
+        </div>
+        <div id="skills">
+          <section class="me">
+
+          </section>
+          <div class="icons">
+            <figure>
+              <img id="html" src="https://img.icons8.com/color/90/undefined/html-5--v1.png" alt="html5"/>
+              <figcaption>Html5</figcaption>
+            </figure>
+            <figure>
+              <img  id="css"src="https://img.icons8.com/color/90/undefined/css3.png" alt="css3"/>
+              <figcaption>Css3</figcaption>
+            </figure>
+            <figure>
+              <img id="sass"src="https://img.icons8.com/color/90/undefined/sass.png" alt="sass"/>
+              <figcaption>Sass</figcaption>
+            </figure>
+            <figure>
+              <img id="js"src="https://img.icons8.com/color/90/undefined/javascript--v1.png" alt="JavaScript"/>
+              <figcaption>JavaScript</figcaption>
+            </figure>
+            <figure>
+              <img id="react" src="https://img.icons8.com/color/90/undefined/react-native.png" alt="react.js"/>
+              <figcaption>React.js</figcaption>
+            </figure>
+            <figure>
+              <img id="node" src="https://img.icons8.com/color/90/undefined/nodejs.png" alt="node.js"/>
+              <figcaption>Node.js</figcaption>
+            </figure>
+            <figure>
+              <img id="mongo"src="https://img.icons8.com/color/90/undefined/mongodb.png" alt="mongo db"/>
+              <figcaption>Mongo db</figcaption>
+            </figure>
+            <figure>
+              <img id="npm"src="https://img.icons8.com/color/90/undefined/npm.png" alt="npm"/>
+              <figcaption>Npm</figcaption>
+            </figure>
+            <figure>
+              <img id="git"src="https://img.icons8.com/color/90/undefined/git.png" alt="git"/>
+              <figcaption>Git</figcaption>
+            </figure>
+            <figure>
+              <img id="github"src="https://img.icons8.com/glyph-neue/90/undefined/github.png" alt="github"/>
+              <figcaption>Github</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div id="project"></div>
+          
+          <footer>
+              <a href="">
+                  <img src="https://img.icons8.com/material-outlined/40/000000/github.png" title="Github" alt="github"/>
+              </a>
+              <a href="">
+                  <img src="https://img.icons8.com/color/40/000000/linkedin.png" title="Linkedin" alt="linkedin"/>
+              </a>
+          </footer>      
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

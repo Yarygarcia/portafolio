@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sass": "^1.52.3"
+  },
+  "name": "portafolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./src/sass/index.scss ./src/css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yarygarcia/portafolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yarygarcia/portafolio/issues"
+  },
+  "homepage": "https://github.com/Yarygarcia/portafolio#readme",
+  "description": ""
+}
