@@ -34,6 +34,7 @@ nav{
     margin: 2.7rem 0.7rem;
     padding: 0rem 17rem;
     background-color: rgb(255, 255, 255);
+    border-bottom: 1.5px dotted rgb(34, 34, 34); 
     ul{ 
         display: flex;
         justify-content: space-evenly;
@@ -47,7 +48,6 @@ nav{
         li{
             display: flex;
             align-items: center;
-            border-bottom: 1.4px dotted rgb(87, 87, 87); 
             a:hover{ 
                 font-size: 1.1rem; 
                 text-shadow: 3px 3px 3px #fbff00; 
