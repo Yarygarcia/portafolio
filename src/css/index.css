@@ -11,15 +11,18 @@
 }
 
 /* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-    --blanco: #303030;
-    --sombra-ppal: #242424;
-    --sombra-sec: #3c3c3c;
-    --borde-negro: #FFFFFF50;
-  }
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
 }
+
+/* Las adaptamos al modo oscuro */
 * {
   margin: 0.1rem 0.4rem;
   padding: 0;
@@ -48,16 +51,19 @@ header {
   border: 2px solid rgb(63, 63, 63);
   box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
   position: fixed;
+  z-index: 100;
 }
-
 nav {
   position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
   height: 8vh;
   width: 95.7vw;
   margin: 2.7rem 0.7rem;
-  padding: 0rem 17rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
+  z-index: 100;
 }
 nav ul {
   display: flex;
@@ -100,17 +106,16 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 #contenedor #home .me {
   grid-area: me;
   height: 87.4vh;
+  width: 23.9vw;
   color: #fff;
   text-align: center;
   font-weight: bold;
-  padding-top: 1rem;
   background-color: #2b2b2b;
-  border-radius: 7px 0px 0px 0px;
   margin: 0;
   padding-top: 4rem;
+  border: 2px dotted white;
 }
 #contenedor #home .me #me {
-  grid-area: imagen;
   display: grid;
   justify-content: center;
   height: 39vh;
@@ -152,22 +157,6 @@ footer {
 }
 footer a:hover {
   font-size: 2.2rem;
-}
-
-/* main section {
-    grid-area: texto;
-    ---font-family: 'Caveat Brush';
-    align-self: end;
-    text-align: center;
-
-} */
-#carouselExampleCaptions {
-  border: 4px solid rgb(206, 3, 3);
-  width: 20rem;
-}
-
-#carouselExampleCaptions h5 {
-  color: #020202;
 }
 
 :root {
@@ -182,15 +171,18 @@ footer a:hover {
 }
 
 /* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-    --blanco: #303030;
-    --sombra-ppal: #242424;
-    --sombra-sec: #3c3c3c;
-    --borde-negro: #FFFFFF50;
-  }
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
 }
+
+/* Las adaptamos al modo oscuro */
 * {
   margin: 0.1rem 0.4rem;
   padding: 0;
@@ -219,16 +211,19 @@ header {
   border: 2px solid rgb(63, 63, 63);
   box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
   position: fixed;
+  z-index: 100;
 }
-
 nav {
   position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
   height: 8vh;
   width: 95.7vw;
   margin: 2.7rem 0.7rem;
-  padding: 0rem 17rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
+  z-index: 100;
 }
 nav ul {
   display: flex;
@@ -271,17 +266,16 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 #contenedor #home .me {
   grid-area: me;
   height: 87.4vh;
+  width: 23.9vw;
   color: #fff;
   text-align: center;
   font-weight: bold;
-  padding-top: 1rem;
   background-color: #2b2b2b;
-  border-radius: 7px 0px 0px 0px;
   margin: 0;
   padding-top: 4rem;
+  border: 2px dotted white;
 }
 #contenedor #home .me #me {
-  grid-area: imagen;
   display: grid;
   justify-content: center;
   height: 39vh;
@@ -325,37 +319,38 @@ footer a:hover {
   font-size: 2.2rem;
 }
 
-/* main section {
-    grid-area: texto;
-    ---font-family: 'Caveat Brush';
-    align-self: end;
-    text-align: center;
-
-} */
-#carouselExampleCaptions {
-  border: 4px solid rgb(206, 3, 3);
-  width: 20rem;
-}
-
-#carouselExampleCaptions h5 {
-  color: #020202;
-}
-
 #skills {
-  padding-top: 5rem;
+  padding-top: 0rem;
   margin: 0rem 0rem;
   width: 95vw;
+  display: grid;
+  grid-template: repeat(4, 25%)/repeat(4, 25%);
+  grid-template-areas: "me skills skills skills" "me skills skills skills" "me skills skills skills" "me skills skills skills";
+}
+#skills .me {
+  grid-area: me;
+  height: 97vh;
+  width: 23.9vw;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 0rem;
+  background-color: #2b2b2b;
+  margin: 0;
+  padding-top: 0rem;
+  border: 2px dotted white;
 }
 #skills .icons {
+  grid-area: skills;
   display: flexbox;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 95vw;
-  padding-left: 20rem;
+  width: 80vw;
+  padding-top: 5rem;
 }
 #skills figure {
   display: inline-block;
-  padding: 1rem 4rem;
+  padding: 1rem 4.3rem;
   text-align: center;
 }
 #skills figure:hover {
@@ -374,19 +369,24 @@ footer a:hover {
 }
 
 /* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-    --blanco: #303030;
-    --sombra-ppal: #242424;
-    --sombra-sec: #3c3c3c;
-    --borde-negro: #FFFFFF50;
-  }
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
 }
+
+/* Las adaptamos al modo oscuro */
 .carrusel {
-  width: 90%;
+  border-radius: 1rem;
+  background-color: #2b2b2b;
+  width: 70%;
   max-width: 120em;
-  padding: 2em;
+  padding: 3em 2em 0.5;
   height: 63vh;
   color: var(--negro);
   transition: all 0.4s ease;
@@ -394,10 +394,14 @@ footer a:hover {
   background-color: var(--blanco);
   box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
   overflow: hidden;
+  z-index: 1;
 }
 .carrusel .grande {
+  z-index: -100;
+  border-radius: 1rem;
+  background-color: #2b2b2b;
   width: 200%;
-  height: 45vh;
+  height: 50vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -407,13 +411,14 @@ footer a:hover {
   border-radius: 1em;
   background-color: var(--blanco);
   box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  padding: 2em;
+  padding: 1em;
   transition: all 0.5s ease;
   transform: translateX(0%);
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
-  min-height: 38vh;
+  min-height: 40vh;
+  border-radius: 1rem;
   color: var(--negro);
   transition: all 0.4s ease;
   border-radius: 1em;
@@ -422,12 +427,14 @@ footer a:hover {
 }
 .carrusel .puntos {
   width: 100%;
-  margin: 1em 0 0;
-  padding: 0.4em;
+  border-radius: 1rem;
+  margin: 1em 0em 0 3em;
+  padding: 1em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  background-color: rgb(248, 255, 153);
 }
 .carrusel .puntos .punto {
   width: 2em;
@@ -439,6 +446,8 @@ footer a:hover {
   border-radius: 1em;
   background-color: var(--blanco);
   box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
 }
 .carrusel .puntos .punto.activo {
   color: rgb(244, 245, 234);
@@ -456,14 +465,5 @@ footer a:hover {
 }
 
 /* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-    --blanco: #303030;
-    --sombra-ppal: #242424;
-    --sombra-sec: #3c3c3c;
-    --borde-negro: #FFFFFF50;
-  }
-}
 
 /*# sourceMappingURL=index.css.map */

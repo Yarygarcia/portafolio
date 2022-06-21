@@ -44,3 +44,10 @@
 	}
 	gap: $gap ;
 }
+
+//-----------------------------------------
+@mixin pantalla($medida) {
+	@media screen and (min-width: map-get($medidas, $medida)){
+		@content;
+	}
+}

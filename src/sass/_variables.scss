@@ -1,12 +1,13 @@
 $amarillo: rgb(248, 255, 153);
+$negro: #2b2b2b;
 $color-border:  rgb(65, 64, 64);
-$encabezado1: #b8f2e6;
-$encabezado2: #92e6a7;
-$encabezado3: #b7efc5;
-$morado: #d1cdee;
-$azuk: #9cb6d4;
-$moradito: rgb(202, 152, 235)  ;
-$rosado:  #f3a2d1 ;
+
+$medidas:(
+    sm: 540px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1126px
+);
 
 
 :root{
@@ -24,12 +25,12 @@ $rosado:  #f3a2d1 ;
     
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
-    :root{
-        --negro         : #ececec;
-        --blanco        : #303030;
-        --sombra-ppal   : #242424;
-        --sombra-sec    : #3c3c3c;
+    // :root{
+    //     --negro         : #ececec;
+    //     --blanco        : #303030;
+    //     --sombra-ppal   : #242424;
+    //     --sombra-sec    : #3c3c3c;
 
-        --borde-negro   : #FFFFFF50;
-    }
+    //     --borde-negro   : #FFFFFF50;
+    // }
 }

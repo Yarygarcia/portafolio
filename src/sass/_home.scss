@@ -1,9 +1,10 @@
-@import "variables";
+@import "variables", "mixins";
 *{
     margin: 0.1rem 0.4rem;
     padding: 0;
     box-sizing: border-box;
     font-family:'Laila', sans-serif;
+
 }
 body{
     margin: 0;
@@ -25,15 +26,29 @@ body{
         border:2px solid rgb(63, 63, 63);
         box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
         position:fixed;
+        z-index: 100;
+        @include pantalla(sm){
+        };
+        @include pantalla(md){
+        }
+        @include pantalla(lg){
+        };
+        @include pantalla(xl){
+        }
+
+
     }
     nav{
         position:fixed;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
         height: 8vh;
         width: 95.7vw;
         margin: 2.7rem 0.7rem;
-        padding: 0rem 17rem;
         background-color: rgb(255, 255, 255);
         border-bottom: 1.5px dotted rgb(34, 34, 34); 
+        z-index: 100;
         ul{ 
             display: flex;
             justify-content: space-evenly;
@@ -77,16 +92,16 @@ body{
             .me{
                 grid-area: me;
                 height: 87.4vh;
+                width: 23.9vw;
                 color: #fff;
                 text-align: center;
                 font-weight: bold;
-                padding-top: 1rem ;
-                background-color: #2b2b2b;
-                border-radius: 7px 0px 0px 0px;
+                background-color: $negro;
                 margin:0;
                 padding-top: 4rem ;
+                border: 2px dotted  white;
+
                 #me{
-                    grid-area: imagen;
                     display: grid;
                     justify-content: center;
                     height:39vh;
@@ -132,26 +147,8 @@ body{
             font-size: 2.2rem;
         }
     }
-            
+
     
-    
-    /* main section {
-        grid-area: texto;
-        ---font-family: 'Caveat Brush';
-        align-self: end;
-        text-align: center;
-        
-    } */
-    
-    
-    #carouselExampleCaptions{
-        border: 4px solid rgb(206, 3, 3);
-        width: 20rem;
-        
-    }
-    #carouselExampleCaptions h5{
-        color: #020202;
-    }
     
     
 
