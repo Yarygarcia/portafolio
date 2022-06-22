@@ -57,7 +57,7 @@ body{
         z-index: 100;
         @include pantalla(xs){
             padding-top: 2rem;
-            width: 92vw;
+            width: 92.4%;
         }
         @include pantalla(sm){
             padding-top: .4rem;
@@ -133,20 +133,21 @@ body{
         margin: 10px;
         #home{
             padding-top: 6rem;
-            display: grid;
+            // display: grid;
             margin: 0;
-            grid-template: repeat(4,25%)/repeat(4,25%);
-            grid-template-areas: 
-            "me . . . "
-            "me main main main"
-            "me main main main"
-            "me . . . ";
+            // grid-template: repeat(4,25%)/repeat(4,25%);
+            // grid-template-areas: 
+            // "me . . . "
+            // "me main main main"
+            // "me main main main"
+            // "me . . . ";
             @include pantalla(xs){
                 display: grid;
-                grid-template: repeat(1,100%)/repeat(1,100%);
+                grid-template: repeat(2,58%)/repeat(1,100%);
                 grid-template-areas: 
                 "me"
-                "main"
+                "main";
+                // "main";
                 // font-size: 0.7rem;
             }
             @include pantalla(sm){
@@ -155,13 +156,13 @@ body{
             @include pantalla(lg){
                 // font-size: .9rem; 
                 display: grid;
-            margin: 0;
-            grid-template: repeat(4,25%)/repeat(4,25%);
-            grid-template-areas: 
-            "me . . . "
-            "me main main main"
-            "me main main main"
-            "me . . . ";  
+                margin: 0;
+                grid-template: repeat(4,25%)/repeat(4,25%);
+                grid-template-areas: 
+                "me . . . "
+                "me main main main"
+                "me main main main"
+                "me . . . ";  
             };
             @include pantalla(xl){
                 // font-size: 1rem; 
@@ -189,6 +190,7 @@ body{
                     grid-area: me;
                     width: 92.4vw;
                     padding-top: 2rem ;
+                }
                 @include pantalla(xs){
                 }
                 @include pantalla(sm){
@@ -266,15 +268,26 @@ body{
                     }
                 }
             }
-            main{
+            .contenedorCarrusel{
                 grid-area: main;
-                display: flex;
-                align-items: center;
-                justify-items: center;
-                align-content: center;
-                justify-content: center;
+                background-color: rgb(46, 46, 46);
+                border: 2px dotted  white;
+                // margin: 0;
+                // padding: 0;
+                // height: 120vh;
+                // // display: grid;
+                // display: flex;
+                // align-items: center;
+                // justify-items: center;
+                // align-content: center;
+                // justify-content: center;
                 @include pantalla(xs){
-                    font-size: 1.2rem;
+                    // grid-area: main;
+                    // display: flex;
+                    // align-items: start;
+                    // justify-items: start;
+                    // align-content: flex-start;
+                    // justify-content: start;
                 }
                 @include pantalla(sm){
                     // font-size: 0.8rem;
@@ -305,4 +318,3 @@ body{
             font-size: 2.2rem;
         }
     }
-}

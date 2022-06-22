@@ -11,6 +11,38 @@
     "me skills skills skills"
     "me skills skills skills"
     "me skills skills skills";
+    @include pantalla(xs){
+        padding-top: 12rem ;
+        display: grid;
+        grid-template: repeat(2,50%)/repeat(1,100%);
+        grid-template-areas: 
+        "me me me me"
+        "skills skills skills skills"
+        "skills skills skills skills"
+        "skills skills skills skills";
+        
+    }
+    @include pantalla(sm){
+        // font-size: 0.8rem;
+    }
+    @include pantalla(lg){
+        display: grid;
+        grid-template: repeat(4,25%)/repeat(4,25%);
+        grid-template-areas: 
+        "me skills skills skills"
+        "me skills skills skills"
+        "me skills skills skills"
+        "me skills skills skills";
+    };
+    @include pantalla(xl){
+        display: grid;
+        grid-template: repeat(4,25%)/repeat(4,25%);
+        grid-template-areas: 
+        "me skills skills skills"
+        "me skills skills skills"
+        "me skills skills skills"
+        "me skills skills skills";
+    }
     .me{
         grid-area: me;
         height: 97vh;
@@ -23,18 +55,59 @@
         margin:0;
         padding-top: 0rem;
         border: 2px dotted  white;
+        @include pantalla(xs){
+            grid-area: me;
+            height: 15rem;
+            width: 92vw;
+        }
+        @include pantalla(sm){
+            // font-size: 0.8rem;
+        }
+        @include pantalla(lg){
+            display: grid;
+            grid-template: repeat(4,25%)/repeat(4,25%);
+            grid-template-areas: 
+            "me skills skills skills"
+            "me skills skills skills"
+            "me skills skills skills"
+            "me skills skills skills";
+        };
+        @include pantalla(xl){
+            display: grid;
+            grid-template: repeat(4,25%)/repeat(4,25%);
+            grid-template-areas: 
+            "me skills skills skills"
+            "me skills skills skills"
+            "me skills skills skills"
+            "me skills skills skills";
+        }
     }
     .icons{
+        background-color: aqua;
         grid-area: skills;
         display: flexbox;
         flex-direction:row;
         flex-wrap: wrap;
-        width: 80vw;
+        width: 40vw;
         padding-top: 5rem;
+        @include pantalla(xs){
+            width: 92vw;
+            padding-top: 0rem;
+        }
+        @include pantalla(sm){
+        }
+        @include pantalla(lg){
+            width: 40vw;
+            padding-top: 5rem;
+        };
+        @include pantalla(xl){
+            width: 40vw;
+            padding-top: 5rem;
+        }
     }
     figure{
         display: inline-block;
-        padding: 1rem 4.3rem;
+        padding: 0.3rem 1rem;
         text-align: center;
     }
     figure:hover{

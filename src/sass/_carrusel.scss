@@ -1,9 +1,10 @@
 @import "mixins", "variables";
 .carrusel{
-    // width: 60%;
-    // max-width: 120em;
-    // height: 68vh;
-    // padding: 1rem;
+    grid-area: main;
+    width: 60%;
+    max-width: 120em;
+    height: 68vh;
+    padding: 0rem;
     border-radius: 1rem;
     // overflow: hidden;
     background-color: $negro;
