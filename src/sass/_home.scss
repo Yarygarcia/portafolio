@@ -1,13 +1,16 @@
-@import "variables", "mixins";
+@import "variables", "mixins", "carrusel";
 *{
-    margin: 0.1rem 0.4rem;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:'Laila', sans-serif;
-
+    
+}
+html{
 }
 body{
-    margin: 0;
+    margin: 0.1rem 0.4rem;
+    // margin: 0;
     border: 3px solid rgb(85, 85, 85);
     border-top: hidden;
     border-radius: 20px;
@@ -19,7 +22,7 @@ body{
         align-items: center;  
         margin:0;
         padding: 0;
-        width: 97.5vw; 
+        width: 97vw; 
         height: 7vh;
         background: $amarillo ;
         border-radius: 17px 17px 0px 0px;
@@ -27,7 +30,11 @@ body{
         box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
         position:fixed;
         z-index: 110;
+        @include pantalla(xs){
+            width: 93vw
+        };
         @include pantalla(sm){
+            width: 97vw
         };
         @include pantalla(md){
         }
@@ -40,17 +47,17 @@ body{
     nav{
         position:fixed;
         display: flex;
-        align-items: flex-start;
-        height: 8vh;
+        align-items: flex-end;
+        // height: 8vh;
         // padding-top: 0.3rem;------
         // width: 95.7vw; ---------
-        margin: 2.5rem 0.7rem 0rem;
+        margin-top: 2.3rem;
         background-color: rgb(255, 255, 255);
         border-bottom: 1.5px dotted rgb(34, 34, 34); 
         z-index: 100;
         @include pantalla(xs){
-            padding-top: .1rem;
-            width: 88vw;
+            padding-top: 2rem;
+            width: 92vw;
         }
         @include pantalla(sm){
             padding-top: .4rem;
@@ -75,7 +82,7 @@ body{
             // font-size: 1rem; ---------   
             font-weight: bold;
             @include pantalla(xs){
-                font-size: 0.7rem;
+                font-size: 0.8rem;
             }
             @include pantalla(sm){
                 // font-size: 0.8rem;
@@ -125,7 +132,7 @@ body{
         border: 2px double black;
         margin: 10px;
         #home{
-            padding-top: 5rem;
+            padding-top: 6rem;
             display: grid;
             margin: 0;
             grid-template: repeat(4,25%)/repeat(4,25%);
@@ -180,17 +187,14 @@ body{
                 border: 2px dotted  white;
                 @include pantalla(xs){
                     grid-area: me;
-                width: 88.4vw;
-                padding-top: 2rem ;
+                    width: 92.4vw;
+                    padding-top: 2rem ;
                 @include pantalla(xs){
-                    // font-size: 0.7rem;
                 }
                 @include pantalla(sm){
                     grid-area: me;
-                    // font-size: 0.8rem;
                 }
                 @include pantalla(lg){
-                    // font-size: .9rem;  
                     grid-area: me;
                     width: 23.9vw; 
                     height: 83.2vh;
@@ -199,9 +203,7 @@ body{
                     grid-area: me;
                     width: 23.9vw;
                     height: 87.4vh;
-                    // font-size: 1rem;   
                 }
-
                 #me{
                     display: grid;
                     justify-content: center;
@@ -234,7 +236,7 @@ body{
                     text-shadow: 3px 7px 8px #6a5527d7;
                     letter-spacing: 6px;
                     @include pantalla(xs){
-                        font-size: 2.4rem;
+                        font-size: 4rem;
                     }
                     @include pantalla(sm){
                         // font-size: 0.8rem;
@@ -251,7 +253,7 @@ body{
                     font-size: 1.2rem;
                     padding-top: 1.4rem;
                     @include pantalla(xs){
-                        font-size: 1.2rem;
+                        font-size: 1.5rem;
                     }
                     @include pantalla(sm){
                         // font-size: 0.8rem;

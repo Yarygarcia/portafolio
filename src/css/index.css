@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --negro: #393939;
   --blanco: #ececec;
@@ -6,8 +5,6 @@
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
@@ -18,20 +15,110 @@
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+}
+
+/* Las adaptamos al modo oscuro */
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+}
+
+/* Las adaptamos al modo oscuro */
+.carrusel {
+  border-radius: 1rem;
+  background-color: #2b2b2b;
+  width: 70%;
+  max-width: 120em;
+  padding: 3em 2em 0.5;
+  height: 63vh;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.carrusel .grande {
+  z-index: -100;
+  border-radius: 1rem;
+  background-color: #2b2b2b;
+  width: 200%;
+  height: 50vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  padding: 1em;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.carrusel .grande img {
+  width: calc(50% - 2em);
+  min-height: 40vh;
+  border-radius: 1rem;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+.carrusel .puntos {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1em 0em 0 3em;
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(248, 255, 153);
+}
+.carrusel .puntos .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  list-style-type: none;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+.carrusel .puntos .punto.activo {
+  color: rgb(244, 245, 234);
+}
+
 * {
-  margin: 0.1rem 0.4rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Laila", sans-serif;
 }
 
 body {
-  margin: 0;
+  margin: 0.1rem 0.4rem;
   border: 3px solid rgb(85, 85, 85);
   border-top: hidden;
   border-radius: 20px;
@@ -44,7 +131,7 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
-  width: 97.5vw;
+  width: 97vw;
   height: 7vh;
   background: rgb(248, 255, 153);
   border-radius: 17px 17px 0px 0px;
@@ -53,20 +140,29 @@ header {
   position: fixed;
   z-index: 110;
 }
+@media screen and (min-width: 150px) {
+  header {
+    width: 93vw;
+  }
+}
+@media screen and (min-width: 540px) {
+  header {
+    width: 97vw;
+  }
+}
 nav {
   position: fixed;
   display: flex;
-  align-items: flex-start;
-  height: 8vh;
-  margin: 2.5rem 0.7rem 0rem;
+  align-items: flex-end;
+  margin-top: 2.3rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
   z-index: 100;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav {
-    padding-top: 0.1rem;
-    width: 88vw;
+    padding-top: 2rem;
+    width: 92vw;
   }
 }
 @media screen and (min-width: 540px) {
@@ -99,9 +195,9 @@ nav ul {
   color: #020202;
   font-weight: bold;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav ul {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -114,7 +210,7 @@ nav ul {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav ul li img {
     width: 1.5rem;
   }
@@ -134,7 +230,7 @@ nav ul li a:hover {
   text-shadow: 3px 3px 3px #fbff00;
   color: #020202;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav ul li a:hover {
     font-size: 0.8rem;
   }
@@ -161,13 +257,13 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   margin: 10px;
 }
 #contenedor #home {
-  padding-top: 5rem;
+  padding-top: 6rem;
   display: grid;
   margin: 0;
   grid-template: repeat(4, 25%)/repeat(4, 25%);
   grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home {
     display: grid;
     grid-template: repeat(1, 100%)/repeat(1, 100%);
@@ -202,33 +298,33 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   padding-top: 4rem;
   border: 2px dotted white;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me {
     grid-area: me;
-    width: 88.4vw;
+    width: 92.4vw;
     padding-top: 2rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 540px) {
+@media screen and (min-width: 150px) and (min-width: 540px) {
   #contenedor #home .me {
     grid-area: me;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me {
     grid-area: me;
     width: 23.9vw;
     height: 83.2vh;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me {
     grid-area: me;
     width: 23.9vw;
     height: 87.4vh;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me #me {
     display: grid;
     justify-content: center;
@@ -240,17 +336,17 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
     text-align: center;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me #me {
     height: 34.6vh;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me #me {
     height: 39vh;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me .text h1 {
     font-family: "square peg", cursive;
     padding-top: 26px;
@@ -259,39 +355,39 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
     letter-spacing: 6px;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 100px) {
+@media screen and (min-width: 150px) and (min-width: 150px) {
   #contenedor #home .me .text h1 {
-    font-size: 2.4rem;
+    font-size: 4rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me .text h1 {
     font-size: 2.2rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me .text h1 {
     font-size: 2.4rem;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me .text p {
     font-family: "Laila", sans-serif;
     font-size: 1.2rem;
     padding-top: 1.4rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 100px) {
+@media screen and (min-width: 150px) and (min-width: 150px) {
   #contenedor #home .me .text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me .text p {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me .text p {
     font-size: 1.2rem;
   }
@@ -304,7 +400,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   align-content: center;
   justify-content: center;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me main {
     font-size: 1.2rem;
   }
@@ -344,8 +440,6 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
@@ -356,20 +450,110 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+}
+
+/* Las adaptamos al modo oscuro */
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+}
+
+/* Las adaptamos al modo oscuro */
+.carrusel {
+  border-radius: 1rem;
+  background-color: #2b2b2b;
+  width: 70%;
+  max-width: 120em;
+  padding: 3em 2em 0.5;
+  height: 63vh;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.carrusel .grande {
+  z-index: -100;
+  border-radius: 1rem;
+  background-color: #2b2b2b;
+  width: 200%;
+  height: 50vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  padding: 1em;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.carrusel .grande img {
+  width: calc(50% - 2em);
+  min-height: 40vh;
+  border-radius: 1rem;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+.carrusel .puntos {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1em 0em 0 3em;
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(248, 255, 153);
+}
+.carrusel .puntos .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  list-style-type: none;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+.carrusel .puntos .punto.activo {
+  color: rgb(244, 245, 234);
+}
+
 * {
-  margin: 0.1rem 0.4rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Laila", sans-serif;
 }
 
 body {
-  margin: 0;
+  margin: 0.1rem 0.4rem;
   border: 3px solid rgb(85, 85, 85);
   border-top: hidden;
   border-radius: 20px;
@@ -382,7 +566,7 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
-  width: 97.5vw;
+  width: 97vw;
   height: 7vh;
   background: rgb(248, 255, 153);
   border-radius: 17px 17px 0px 0px;
@@ -391,20 +575,29 @@ header {
   position: fixed;
   z-index: 110;
 }
+@media screen and (min-width: 150px) {
+  header {
+    width: 93vw;
+  }
+}
+@media screen and (min-width: 540px) {
+  header {
+    width: 97vw;
+  }
+}
 nav {
   position: fixed;
   display: flex;
-  align-items: flex-start;
-  height: 8vh;
-  margin: 2.5rem 0.7rem 0rem;
+  align-items: flex-end;
+  margin-top: 2.3rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
   z-index: 100;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav {
-    padding-top: 0.1rem;
-    width: 88vw;
+    padding-top: 2rem;
+    width: 92vw;
   }
 }
 @media screen and (min-width: 540px) {
@@ -437,9 +630,9 @@ nav ul {
   color: #020202;
   font-weight: bold;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav ul {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -452,7 +645,7 @@ nav ul {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav ul li img {
     width: 1.5rem;
   }
@@ -472,7 +665,7 @@ nav ul li a:hover {
   text-shadow: 3px 3px 3px #fbff00;
   color: #020202;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   nav ul li a:hover {
     font-size: 0.8rem;
   }
@@ -499,13 +692,13 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   margin: 10px;
 }
 #contenedor #home {
-  padding-top: 5rem;
+  padding-top: 6rem;
   display: grid;
   margin: 0;
   grid-template: repeat(4, 25%)/repeat(4, 25%);
   grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home {
     display: grid;
     grid-template: repeat(1, 100%)/repeat(1, 100%);
@@ -540,33 +733,33 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   padding-top: 4rem;
   border: 2px dotted white;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me {
     grid-area: me;
-    width: 88.4vw;
+    width: 92.4vw;
     padding-top: 2rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 540px) {
+@media screen and (min-width: 150px) and (min-width: 540px) {
   #contenedor #home .me {
     grid-area: me;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me {
     grid-area: me;
     width: 23.9vw;
     height: 83.2vh;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me {
     grid-area: me;
     width: 23.9vw;
     height: 87.4vh;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me #me {
     display: grid;
     justify-content: center;
@@ -578,17 +771,17 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
     text-align: center;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me #me {
     height: 34.6vh;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me #me {
     height: 39vh;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me .text h1 {
     font-family: "square peg", cursive;
     padding-top: 26px;
@@ -597,39 +790,39 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
     letter-spacing: 6px;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 100px) {
+@media screen and (min-width: 150px) and (min-width: 150px) {
   #contenedor #home .me .text h1 {
-    font-size: 2.4rem;
+    font-size: 4rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me .text h1 {
     font-size: 2.2rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me .text h1 {
     font-size: 2.4rem;
   }
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me .text p {
     font-family: "Laila", sans-serif;
     font-size: 1.2rem;
     padding-top: 1.4rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 100px) {
+@media screen and (min-width: 150px) and (min-width: 150px) {
   #contenedor #home .me .text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1024px) {
+@media screen and (min-width: 150px) and (min-width: 1024px) {
   #contenedor #home .me .text p {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 100px) and (min-width: 1126px) {
+@media screen and (min-width: 150px) and (min-width: 1126px) {
   #contenedor #home .me .text p {
     font-size: 1.2rem;
   }
@@ -642,7 +835,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   align-content: center;
   justify-content: center;
 }
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 150px) {
   #contenedor #home .me main {
     font-size: 1.2rem;
   }
@@ -675,6 +868,16 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   font-size: 2.2rem;
 }
 
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+}
+
+/* Las adaptamos al modo oscuro */
 #skills {
   padding-top: 0rem;
   margin: 0rem 0rem;
@@ -720,8 +923,6 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
@@ -732,8 +933,6 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
@@ -816,8 +1015,6 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
 }
 
 /* Las adaptamos al modo oscuro */
