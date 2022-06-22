@@ -15,9 +15,9 @@ body{
     border-top: hidden;
     border-radius: 20px;
 }  
-    header {
-        display: flex;
-        justify-content: end;
+header {
+    display: flex;
+    justify-content: end;
         flex-direction: row-reverse;
         align-items: center;  
         margin:0;
@@ -57,7 +57,7 @@ body{
         z-index: 100;
         @include pantalla(xs){
             padding-top: 2rem;
-            width: 92.4%;
+            width: 92.5%;
         }
         @include pantalla(sm){
             padding-top: .4rem;
@@ -131,6 +131,21 @@ body{
         border-radius: 10px;
         border: 2px double black;
         margin: 10px;
+        @include pantalla(xs){
+            background-color: $negro;
+            border-bottom: 2px dotted  white;
+            
+        }
+        @include pantalla(sm){
+            background-color: $negro;
+            border-bottom: 2px dotted  white;
+        }
+        @include pantalla(lg){
+            background-color: #fff;
+        };
+        @include pantalla(xl){
+            background-color: #fff;
+        }
         #home{
             padding-top: 6rem;
             // display: grid;
@@ -147,16 +162,19 @@ body{
                 grid-template-areas: 
                 "me"
                 "main";
+                // background-color: $negro; 
                 // "main";
                 // font-size: 0.7rem;
             }
             @include pantalla(sm){
                 // font-size: 0.8rem;
+                // background-color: $negro; 
             }
             @include pantalla(lg){
                 // font-size: .9rem; 
-                display: grid;
+                // background-color: #fff; 
                 margin: 0;
+                display: grid;
                 grid-template: repeat(4,25%)/repeat(4,25%);
                 grid-template-areas: 
                 "me . . . "
@@ -166,8 +184,9 @@ body{
             };
             @include pantalla(xl){
                 // font-size: 1rem; 
-                display: grid;
+                // background-color: #fff; 
                 margin: 0;
+                display: grid;
                 grid-template: repeat(4,25%)/repeat(4,25%);
                 grid-template-areas: 
                 "me . . . "
@@ -309,14 +328,23 @@ body{
         }
     }
     footer{
-        grid-area: footer;
-        height: 22vh;
-        background-color: #fbff00;
-        border-top: 2px solid black;
+        background-color: #ffffff;
+        border-top: 2px dotted  white;
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: end;
+        @include pantalla(xs){
+            height: 5vh;
+        }
+        @include pantalla(sm){
+        }
+        @include pantalla(lg){
+            height: 12vh
+        };
+        @include pantalla(xl){
+            height: 12vh;
+        }
         a:hover{
             font-size: 2.2rem;
         }

@@ -167,7 +167,7 @@ nav {
 @media screen and (min-width: 150px) {
   nav {
     padding-top: 2rem;
-    width: 92.4%;
+    width: 92.5%;
   }
 }
 @media screen and (min-width: 540px) {
@@ -261,6 +261,28 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   border: 2px double black;
   margin: 10px;
 }
+@media screen and (min-width: 150px) {
+  #contenedor {
+    background-color: #2b2b2b;
+    border-bottom: 2px dotted white;
+  }
+}
+@media screen and (min-width: 540px) {
+  #contenedor {
+    background-color: #2b2b2b;
+    border-bottom: 2px dotted white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contenedor {
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 1126px) {
+  #contenedor {
+    background-color: #fff;
+  }
+}
 #contenedor #home {
   padding-top: 6rem;
   margin: 0;
@@ -274,16 +296,16 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 @media screen and (min-width: 1024px) {
   #contenedor #home {
-    display: grid;
     margin: 0;
+    display: grid;
     grid-template: repeat(4, 25%)/repeat(4, 25%);
     grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
   }
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home {
-    display: grid;
     margin: 0;
+    display: grid;
     grid-template: repeat(4, 25%)/repeat(4, 25%);
     grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
   }
@@ -420,14 +442,27 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 
 footer {
-  grid-area: footer;
-  height: 22vh;
-  background-color: #fbff00;
-  border-top: 2px solid black;
+  background-color: #ffffff;
+  border-top: 2px dotted white;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: end;
+}
+@media screen and (min-width: 150px) {
+  footer {
+    height: 5vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 12vh;
+  }
+}
+@media screen and (min-width: 1126px) {
+  footer {
+    height: 12vh;
+  }
 }
 footer a:hover {
   font-size: 2.2rem;
@@ -602,7 +637,7 @@ nav {
 @media screen and (min-width: 150px) {
   nav {
     padding-top: 2rem;
-    width: 92.4%;
+    width: 92.5%;
   }
 }
 @media screen and (min-width: 540px) {
@@ -696,6 +731,28 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   border: 2px double black;
   margin: 10px;
 }
+@media screen and (min-width: 150px) {
+  #contenedor {
+    background-color: #2b2b2b;
+    border-bottom: 2px dotted white;
+  }
+}
+@media screen and (min-width: 540px) {
+  #contenedor {
+    background-color: #2b2b2b;
+    border-bottom: 2px dotted white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contenedor {
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 1126px) {
+  #contenedor {
+    background-color: #fff;
+  }
+}
 #contenedor #home {
   padding-top: 6rem;
   margin: 0;
@@ -709,16 +766,16 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 @media screen and (min-width: 1024px) {
   #contenedor #home {
-    display: grid;
     margin: 0;
+    display: grid;
     grid-template: repeat(4, 25%)/repeat(4, 25%);
     grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
   }
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home {
-    display: grid;
     margin: 0;
+    display: grid;
     grid-template: repeat(4, 25%)/repeat(4, 25%);
     grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
   }
@@ -855,14 +912,27 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 
 footer {
-  grid-area: footer;
-  height: 22vh;
-  background-color: #fbff00;
-  border-top: 2px solid black;
+  background-color: #ffffff;
+  border-top: 2px dotted white;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: end;
+}
+@media screen and (min-width: 150px) {
+  footer {
+    height: 5vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 12vh;
+  }
+}
+@media screen and (min-width: 1126px) {
+  footer {
+    height: 12vh;
+  }
 }
 footer a:hover {
   font-size: 2.2rem;
@@ -926,7 +996,9 @@ footer a:hover {
   #skills .me {
     grid-area: me;
     height: 15rem;
-    width: 92vw;
+    width: 92.7vw;
+    border: 2px dotted white;
+    border-bottom: hidden;
   }
 }
 @media screen and (min-width: 540px) {
@@ -970,12 +1042,14 @@ footer a:hover {
 @media screen and (min-width: 150px) {
   #skills .icons {
     grid-area: skills;
-    width: 92vw;
+    width: 92.7vw;
     height: 68vh;
     padding-top: 0rem;
     background-color: #2b2b2b;
     border: 2px dotted white;
     margin-left: 0;
+    border-top: hidden;
+    border-bottom: hidden;
   }
 }
 @media screen and (min-width: 540px) {

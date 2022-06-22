@@ -56,8 +56,9 @@
         @include pantalla(xs){
             grid-area: me;
             height: 15rem;
-            width: 92vw;
-            // border-bottom: hidden;
+            width: 92.7vw;
+            border: 2px dotted  white;
+            border-bottom: hidden;
         }
         @include pantalla(sm){
             grid-area: me;
@@ -101,13 +102,14 @@
         padding-top: 5rem;
         @include pantalla(xs){
             grid-area: skills;
-            width: 92vw;
+            width: 92.7vw;
             height: 68vh;
             padding-top: 0rem;
             background-color: $negro;
             border: 2px dotted  white;
             margin-left: 0;
-            // border-top: hidden;
+            border-top: hidden;
+            border-bottom:hidden ;
         }
         @include pantalla(sm){
             grid-area: skills;
