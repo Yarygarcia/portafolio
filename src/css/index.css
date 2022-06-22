@@ -51,39 +51,103 @@ header {
   border: 2px solid rgb(63, 63, 63);
   box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
   position: fixed;
-  z-index: 100;
+  z-index: 110;
 }
 nav {
   position: fixed;
   display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
+  align-items: flex-start;
   height: 8vh;
-  width: 95.7vw;
-  margin: 2.7rem 0.7rem;
+  margin: 2.5rem 0.7rem 0rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
   z-index: 100;
 }
+@media screen and (min-width: 100px) {
+  nav {
+    padding-top: 0.1rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 540px) {
+  nav {
+    padding-top: 0.4rem;
+    width: 89vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
+    width: 92.5vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    width: 94vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav {
+    padding-top: 0.5rem;
+    width: 95.7vw;
+  }
+}
 nav ul {
   display: flex;
-  justify-content: space-evenly;
-  width: 73vw;
-  margin-top: 5px;
+  justify-content: space-around;
+  width: 100vw;
   list-style: none;
   color: #020202;
-  font-size: 1rem;
   font-weight: bold;
-  padding-bottom: 13px;
 }
-nav ul li {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 100px) {
+  nav ul {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav ul {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav ul {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 100px) {
+  nav ul li img {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav ul li img {
+    width: 30px;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav ul li img {
+    width: 33px;
+  }
 }
 nav ul li a:hover {
   font-size: 1.1rem;
   text-shadow: 3px 3px 3px #fbff00;
   color: #020202;
+}
+@media screen and (min-width: 100px) {
+  nav ul li a:hover {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav ul li a:hover {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav ul li a:hover {
+    font-size: 1.1rem;
+  }
 }
 nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   color: #020202;
@@ -103,6 +167,29 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   grid-template: repeat(4, 25%)/repeat(4, 25%);
   grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
 }
+@media screen and (min-width: 100px) {
+  #contenedor #home {
+    display: grid;
+    grid-template: repeat(1, 100%)/repeat(1, 100%);
+    grid-template-areas: "me" "main";
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contenedor #home {
+    display: grid;
+    margin: 0;
+    grid-template: repeat(4, 25%)/repeat(4, 25%);
+    grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
+  }
+}
+@media screen and (min-width: 1126px) {
+  #contenedor #home {
+    display: grid;
+    margin: 0;
+    grid-template: repeat(4, 25%)/repeat(4, 25%);
+    grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
+  }
+}
 #contenedor #home .me {
   grid-area: me;
   height: 87.4vh;
@@ -115,29 +202,101 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   padding-top: 4rem;
   border: 2px dotted white;
 }
-#contenedor #home .me #me {
-  display: grid;
-  justify-content: center;
-  height: 39vh;
-  background: rgb(248, 255, 153);
-  border-radius: 50%;
-  border: 2px dotted rgb(0, 0, 0);
-  margin: auto;
-  text-align: center;
+@media screen and (min-width: 100px) {
+  #contenedor #home .me {
+    grid-area: me;
+    width: 88.4vw;
+    padding-top: 2rem;
+  }
 }
-#contenedor #home .me .text h1 {
-  font-family: "square peg", cursive;
-  padding-top: 26px;
-  font-size: 2.4rem;
-  text-shadow: 3px 7px 8px rgba(106, 85, 39, 0.8431372549);
-  letter-spacing: 6px;
+@media screen and (min-width: 100px) and (min-width: 540px) {
+  #contenedor #home .me {
+    grid-area: me;
+  }
 }
-#contenedor #home .me .text p {
-  font-family: "Laila", sans-serif;
-  font-size: 1.2rem;
-  padding-top: 1.4rem;
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me {
+    grid-area: me;
+    width: 23.9vw;
+    height: 83.2vh;
+  }
 }
-#contenedor #home main {
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me {
+    grid-area: me;
+    width: 23.9vw;
+    height: 87.4vh;
+  }
+}
+@media screen and (min-width: 100px) {
+  #contenedor #home .me #me {
+    display: grid;
+    justify-content: center;
+    height: 39vh;
+    background: rgb(248, 255, 153);
+    border-radius: 50%;
+    border: 2px dotted rgb(0, 0, 0);
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me #me {
+    height: 34.6vh;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me #me {
+    height: 39vh;
+  }
+}
+@media screen and (min-width: 100px) {
+  #contenedor #home .me .text h1 {
+    font-family: "square peg", cursive;
+    padding-top: 26px;
+    font-size: 2.4rem;
+    text-shadow: 3px 7px 8px rgba(106, 85, 39, 0.8431372549);
+    letter-spacing: 6px;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 100px) {
+  #contenedor #home .me .text h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me .text h1 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me .text h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 100px) {
+  #contenedor #home .me .text p {
+    font-family: "Laila", sans-serif;
+    font-size: 1.2rem;
+    padding-top: 1.4rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 100px) {
+  #contenedor #home .me .text p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me .text p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me .text p {
+    font-size: 1.2rem;
+  }
+}
+#contenedor #home .me main {
   grid-area: main;
   display: flex;
   align-items: center;
@@ -145,8 +304,27 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   align-content: center;
   justify-content: center;
 }
-
-footer {
+@media screen and (min-width: 100px) {
+  #contenedor #home .me main {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contenedor #home .me main {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  #contenedor #home .me main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+}
+#contenedor footer {
   grid-area: footer;
   height: 22vh;
   border-top: 2px solid black;
@@ -155,7 +333,7 @@ footer {
   text-align: center;
   align-items: end;
 }
-footer a:hover {
+#contenedor footer a:hover {
   font-size: 2.2rem;
 }
 
@@ -211,39 +389,103 @@ header {
   border: 2px solid rgb(63, 63, 63);
   box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
   position: fixed;
-  z-index: 100;
+  z-index: 110;
 }
 nav {
   position: fixed;
   display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
+  align-items: flex-start;
   height: 8vh;
-  width: 95.7vw;
-  margin: 2.7rem 0.7rem;
+  margin: 2.5rem 0.7rem 0rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
   z-index: 100;
 }
+@media screen and (min-width: 100px) {
+  nav {
+    padding-top: 0.1rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 540px) {
+  nav {
+    padding-top: 0.4rem;
+    width: 89vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
+    width: 92.5vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    width: 94vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav {
+    padding-top: 0.5rem;
+    width: 95.7vw;
+  }
+}
 nav ul {
   display: flex;
-  justify-content: space-evenly;
-  width: 73vw;
-  margin-top: 5px;
+  justify-content: space-around;
+  width: 100vw;
   list-style: none;
   color: #020202;
-  font-size: 1rem;
   font-weight: bold;
-  padding-bottom: 13px;
 }
-nav ul li {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 100px) {
+  nav ul {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav ul {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav ul {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 100px) {
+  nav ul li img {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav ul li img {
+    width: 30px;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav ul li img {
+    width: 33px;
+  }
 }
 nav ul li a:hover {
   font-size: 1.1rem;
   text-shadow: 3px 3px 3px #fbff00;
   color: #020202;
+}
+@media screen and (min-width: 100px) {
+  nav ul li a:hover {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav ul li a:hover {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  nav ul li a:hover {
+    font-size: 1.1rem;
+  }
 }
 nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   color: #020202;
@@ -263,6 +505,29 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   grid-template: repeat(4, 25%)/repeat(4, 25%);
   grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
 }
+@media screen and (min-width: 100px) {
+  #contenedor #home {
+    display: grid;
+    grid-template: repeat(1, 100%)/repeat(1, 100%);
+    grid-template-areas: "me" "main";
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contenedor #home {
+    display: grid;
+    margin: 0;
+    grid-template: repeat(4, 25%)/repeat(4, 25%);
+    grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
+  }
+}
+@media screen and (min-width: 1126px) {
+  #contenedor #home {
+    display: grid;
+    margin: 0;
+    grid-template: repeat(4, 25%)/repeat(4, 25%);
+    grid-template-areas: "me . . . " "me main main main" "me main main main" "me . . . ";
+  }
+}
 #contenedor #home .me {
   grid-area: me;
   height: 87.4vh;
@@ -275,29 +540,101 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   padding-top: 4rem;
   border: 2px dotted white;
 }
-#contenedor #home .me #me {
-  display: grid;
-  justify-content: center;
-  height: 39vh;
-  background: rgb(248, 255, 153);
-  border-radius: 50%;
-  border: 2px dotted rgb(0, 0, 0);
-  margin: auto;
-  text-align: center;
+@media screen and (min-width: 100px) {
+  #contenedor #home .me {
+    grid-area: me;
+    width: 88.4vw;
+    padding-top: 2rem;
+  }
 }
-#contenedor #home .me .text h1 {
-  font-family: "square peg", cursive;
-  padding-top: 26px;
-  font-size: 2.4rem;
-  text-shadow: 3px 7px 8px rgba(106, 85, 39, 0.8431372549);
-  letter-spacing: 6px;
+@media screen and (min-width: 100px) and (min-width: 540px) {
+  #contenedor #home .me {
+    grid-area: me;
+  }
 }
-#contenedor #home .me .text p {
-  font-family: "Laila", sans-serif;
-  font-size: 1.2rem;
-  padding-top: 1.4rem;
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me {
+    grid-area: me;
+    width: 23.9vw;
+    height: 83.2vh;
+  }
 }
-#contenedor #home main {
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me {
+    grid-area: me;
+    width: 23.9vw;
+    height: 87.4vh;
+  }
+}
+@media screen and (min-width: 100px) {
+  #contenedor #home .me #me {
+    display: grid;
+    justify-content: center;
+    height: 39vh;
+    background: rgb(248, 255, 153);
+    border-radius: 50%;
+    border: 2px dotted rgb(0, 0, 0);
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me #me {
+    height: 34.6vh;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me #me {
+    height: 39vh;
+  }
+}
+@media screen and (min-width: 100px) {
+  #contenedor #home .me .text h1 {
+    font-family: "square peg", cursive;
+    padding-top: 26px;
+    font-size: 2.4rem;
+    text-shadow: 3px 7px 8px rgba(106, 85, 39, 0.8431372549);
+    letter-spacing: 6px;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 100px) {
+  #contenedor #home .me .text h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me .text h1 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me .text h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 100px) {
+  #contenedor #home .me .text p {
+    font-family: "Laila", sans-serif;
+    font-size: 1.2rem;
+    padding-top: 1.4rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 100px) {
+  #contenedor #home .me .text p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1024px) {
+  #contenedor #home .me .text p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 1126px) {
+  #contenedor #home .me .text p {
+    font-size: 1.2rem;
+  }
+}
+#contenedor #home .me main {
   grid-area: main;
   display: flex;
   align-items: center;
@@ -305,8 +642,27 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   align-content: center;
   justify-content: center;
 }
-
-footer {
+@media screen and (min-width: 100px) {
+  #contenedor #home .me main {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contenedor #home .me main {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  #contenedor #home .me main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+}
+#contenedor footer {
   grid-area: footer;
   height: 22vh;
   border-top: 2px solid black;
@@ -315,7 +671,7 @@ footer {
   text-align: center;
   align-items: end;
 }
-footer a:hover {
+#contenedor footer a:hover {
   font-size: 2.2rem;
 }
 

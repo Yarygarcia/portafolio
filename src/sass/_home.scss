@@ -26,46 +26,91 @@ body{
         border:2px solid rgb(63, 63, 63);
         box-shadow: -0.2rem -2rem 0rem rgb(255, 255, 255);
         position:fixed;
-        z-index: 100;
+        z-index: 110;
         @include pantalla(sm){
         };
         @include pantalla(md){
         }
         @include pantalla(lg){
+            
         };
         @include pantalla(xl){
         }
-
-
     }
     nav{
         position:fixed;
         display: flex;
-        justify-content: flex-end;
-        align-items: baseline;
+        align-items: flex-start;
         height: 8vh;
-        width: 95.7vw;
-        margin: 2.7rem 0.7rem;
+        // padding-top: 0.3rem;------
+        // width: 95.7vw; ---------
+        margin: 2.5rem 0.7rem 0rem;
         background-color: rgb(255, 255, 255);
         border-bottom: 1.5px dotted rgb(34, 34, 34); 
         z-index: 100;
+        @include pantalla(xs){
+            padding-top: .1rem;
+            width: 88vw;
+        }
+        @include pantalla(sm){
+            padding-top: .4rem;
+            width: 89vw;
+        };
+        @include pantalla(md){
+            width: 92.5vw;
+        }
+        @include pantalla(lg){
+            width: 94vw;
+        };
+        @include pantalla(xl){
+            padding-top:.5rem;
+            width: 95.7vw;
+        }
         ul{ 
             display: flex;
-            justify-content: space-evenly;
-            width: 73vw;
-            margin-top: 5px;
+            justify-content: space-around;
+            width: 100vw;
             list-style:none;
             color: #020202;
-            font-size: 1rem;   
+            // font-size: 1rem; ---------   
             font-weight: bold;
-            padding-bottom: 13px;
+            @include pantalla(xs){
+                font-size: 0.7rem;
+            }
+            @include pantalla(sm){
+                // font-size: 0.8rem;
+            }
+            @include pantalla(lg){
+                font-size: .9rem;   
+            };
+            @include pantalla(xl){
+                font-size: 1rem;   
+            }
             li{
-                display: flex;
-                align-items: center;
+                img{
+                    @include pantalla(xs){
+                        width: 1.5rem;
+                    } 
+                    @include pantalla(lg){
+                        width: 30px;
+                    }
+                    @include pantalla(xl){
+                        width: 33px;
+                    }
+                }
                 a:hover{ 
                     font-size: 1.1rem; 
                     text-shadow: 3px 3px 3px #fbff00; 
                     color: #020202;
+                    @include pantalla(xs){
+                        font-size: .8rem;
+                    } 
+                    @include pantalla(lg){
+                        font-size: 1rem;
+                    }
+                    @include pantalla(xl){
+                        font-size: 1.1rem; 
+                    }
                 }
                 a:link, a:active, a:visited{
                     color: #020202;
@@ -89,6 +134,39 @@ body{
             "me main main main"
             "me main main main"
             "me . . . ";
+            @include pantalla(xs){
+                display: grid;
+                grid-template: repeat(1,100%)/repeat(1,100%);
+                grid-template-areas: 
+                "me"
+                "main"
+                // font-size: 0.7rem;
+            }
+            @include pantalla(sm){
+                // font-size: 0.8rem;
+            }
+            @include pantalla(lg){
+                // font-size: .9rem; 
+                display: grid;
+            margin: 0;
+            grid-template: repeat(4,25%)/repeat(4,25%);
+            grid-template-areas: 
+            "me . . . "
+            "me main main main"
+            "me main main main"
+            "me . . . ";  
+            };
+            @include pantalla(xl){
+                // font-size: 1rem; 
+                display: grid;
+                margin: 0;
+                grid-template: repeat(4,25%)/repeat(4,25%);
+                grid-template-areas: 
+                "me . . . "
+                "me main main main"
+                "me main main main"
+                "me . . . ";  
+            }
             .me{
                 grid-area: me;
                 height: 87.4vh;
@@ -100,6 +178,29 @@ body{
                 margin:0;
                 padding-top: 4rem ;
                 border: 2px dotted  white;
+                @include pantalla(xs){
+                    grid-area: me;
+                width: 88.4vw;
+                padding-top: 2rem ;
+                @include pantalla(xs){
+                    // font-size: 0.7rem;
+                }
+                @include pantalla(sm){
+                    grid-area: me;
+                    // font-size: 0.8rem;
+                }
+                @include pantalla(lg){
+                    // font-size: .9rem;  
+                    grid-area: me;
+                    width: 23.9vw; 
+                    height: 83.2vh;
+                };
+                @include pantalla(xl){
+                    grid-area: me;
+                    width: 23.9vw;
+                    height: 87.4vh;
+                    // font-size: 1rem;   
+                }
 
                 #me{
                     display: grid;
@@ -111,6 +212,20 @@ body{
                     border: 2px dotted rgb(0, 0, 0);
                     margin: auto ;
                     text-align: center;
+                    @include pantalla(xs){
+                        // font-size: 0.7rem;
+                    }
+                    @include pantalla(sm){
+                        // font-size: 0.8rem;
+                    }
+                    @include pantalla(lg){
+                        // font-size: .9rem; 
+                        height:34.6vh;  
+                    };
+                    @include pantalla(xl){
+                        // font-size: 1rem;  
+                        height:39vh; 
+                    }
                 }
                 .text h1{
                     font-family: "square peg", cursive;
@@ -118,11 +233,35 @@ body{
                     font-size: 2.4rem;
                     text-shadow: 3px 7px 8px #6a5527d7;
                     letter-spacing: 6px;
+                    @include pantalla(xs){
+                        font-size: 2.4rem;
+                    }
+                    @include pantalla(sm){
+                        // font-size: 0.8rem;
+                    }
+                    @include pantalla(lg){
+                        font-size: 2.2rem;   
+                    };
+                    @include pantalla(xl){
+                        font-size: 2.4rem;   
+                    }
                 }
                 .text p{
                     font-family:'Laila', sans-serif;
                     font-size: 1.2rem;
                     padding-top: 1.4rem;
+                    @include pantalla(xs){
+                        font-size: 1.2rem;
+                    }
+                    @include pantalla(sm){
+                        // font-size: 0.8rem;
+                    }
+                    @include pantalla(lg){
+                        font-size: 1rem;   
+                    };
+                    @include pantalla(xl){
+                        font-size: 1.2rem;   
+                    }
                 }
             }
             main{
@@ -132,6 +271,23 @@ body{
                 justify-items: center;
                 align-content: center;
                 justify-content: center;
+                @include pantalla(xs){
+                    font-size: 1.2rem;
+                }
+                @include pantalla(sm){
+                    // font-size: 0.8rem;
+                }
+                @include pantalla(lg){
+                    font-size: 1rem;   
+                };
+                @include pantalla(xl){
+                    grid-area: main;
+                    display: flex;
+                    align-items: center;
+                    justify-items: center;
+                    align-content: center;
+                    justify-content: center;  
+                }
             }
         }
     }
@@ -147,10 +303,4 @@ body{
             font-size: 2.2rem;
         }
     }
-
-    
-    
-    
-
-
-
+}
