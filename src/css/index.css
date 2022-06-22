@@ -390,16 +390,26 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 #contenedor #home .contenedorCarrusel {
   grid-area: main;
-  background-color: rgb(46, 46, 46);
   border: 2px dotted white;
+}
+@media screen and (min-width: 150px) {
+  #contenedor #home .contenedorCarrusel {
+    background-color: #2b2b2b;
+  }
+}
+@media screen and (min-width: 540px) {
+  #contenedor #home .contenedorCarrusel {
+    background-color: #2b2b2b;
+  }
 }
 @media screen and (min-width: 1024px) {
   #contenedor #home .contenedorCarrusel {
-    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
   }
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home .contenedorCarrusel {
+    background-color: rgb(255, 255, 255);
     grid-area: main;
     display: flex;
     align-items: center;
@@ -412,6 +422,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 footer {
   grid-area: footer;
   height: 22vh;
+  background-color: #fbff00;
   border-top: 2px solid black;
   display: flex;
   justify-content: center;
@@ -814,16 +825,26 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 #contenedor #home .contenedorCarrusel {
   grid-area: main;
-  background-color: rgb(46, 46, 46);
   border: 2px dotted white;
+}
+@media screen and (min-width: 150px) {
+  #contenedor #home .contenedorCarrusel {
+    background-color: #2b2b2b;
+  }
+}
+@media screen and (min-width: 540px) {
+  #contenedor #home .contenedorCarrusel {
+    background-color: #2b2b2b;
+  }
 }
 @media screen and (min-width: 1024px) {
   #contenedor #home .contenedorCarrusel {
-    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
   }
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home .contenedorCarrusel {
+    background-color: rgb(255, 255, 255);
     grid-area: main;
     display: flex;
     align-items: center;
@@ -836,6 +857,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 footer {
   grid-area: footer;
   height: 22vh;
+  background-color: #fbff00;
   border-top: 2px solid black;
   display: flex;
   justify-content: center;
@@ -868,12 +890,13 @@ footer a:hover {
   #skills {
     padding-top: 12rem;
     display: grid;
-    grid-template: repeat(2, 50%)/repeat(1, 100%);
-    grid-template-areas: "me me me me" "skills skills skills skills" "skills skills skills skills" "skills skills skills skills";
+    grid-template: repeat(2, 20%)/repeat(1, 100%);
+    grid-template-areas: "me me me me" "skills skills skills skills";
   }
 }
 @media screen and (min-width: 1024px) {
   #skills {
+    padding-top: 0rem;
     display: grid;
     grid-template: repeat(4, 25%)/repeat(4, 25%);
     grid-template-areas: "me skills skills skills" "me skills skills skills" "me skills skills skills" "me skills skills skills";
@@ -881,6 +904,7 @@ footer a:hover {
 }
 @media screen and (min-width: 1126px) {
   #skills {
+    padding-top: 0rem;
     display: grid;
     grid-template: repeat(4, 25%)/repeat(4, 25%);
     grid-template-areas: "me skills skills skills" "me skills skills skills" "me skills skills skills" "me skills skills skills";
@@ -896,7 +920,6 @@ footer a:hover {
   padding-top: 0rem;
   background-color: #2b2b2b;
   margin: 0;
-  padding-top: 0rem;
   border: 2px dotted white;
 }
 @media screen and (min-width: 150px) {
@@ -906,22 +929,37 @@ footer a:hover {
     width: 92vw;
   }
 }
+@media screen and (min-width: 540px) {
+  #skills .me {
+    grid-area: me;
+  }
+}
 @media screen and (min-width: 1024px) {
   #skills .me {
-    display: grid;
-    grid-template: repeat(4, 25%)/repeat(4, 25%);
-    grid-template-areas: "me skills skills skills" "me skills skills skills" "me skills skills skills" "me skills skills skills";
+    grid-area: me;
+    height: 97vh;
+    width: 23.9vw;
   }
 }
 @media screen and (min-width: 1126px) {
   #skills .me {
-    display: grid;
-    grid-template: repeat(4, 25%)/repeat(4, 25%);
-    grid-template-areas: "me skills skills skills" "me skills skills skills" "me skills skills skills" "me skills skills skills";
+    grid-area: me;
+    height: 97vh;
+    width: 23.9vw;
+  }
+}
+#skills .me p {
+  margin: 0.5rem 1.4rem;
+  line-height: 3rem;
+  text-align: justify;
+}
+@media screen and (min-width: 150px) {
+  #skills .me p {
+    margin: 0.5rem 1.4rem;
+    line-height: 3rem;
   }
 }
 #skills .icons {
-  background-color: aqua;
   grid-area: skills;
   display: flexbox;
   flex-direction: row;
@@ -931,26 +969,73 @@ footer a:hover {
 }
 @media screen and (min-width: 150px) {
   #skills .icons {
+    grid-area: skills;
     width: 92vw;
+    height: 68vh;
     padding-top: 0rem;
+    background-color: #2b2b2b;
+    border: 2px dotted white;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 540px) {
+  #skills .icons {
+    grid-area: skills;
+    background-color: #2b2b2b;
+    border: 2px dotted white;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   #skills .icons {
-    width: 40vw;
+    grid-area: skills;
+    background-color: rgb(255, 255, 255);
+    height: 97vh;
+    width: 70vw;
     padding-top: 5rem;
+    border: 0;
+    margin-left: 2rem;
   }
 }
 @media screen and (min-width: 1126px) {
   #skills .icons {
-    width: 40vw;
+    grid-area: skills;
+    background-color: rgb(255, 255, 255);
+    height: 97vh;
+    width: 70vw;
     padding-top: 5rem;
+    border: 0;
+    margin-left: 2rem;
   }
 }
 #skills figure {
   display: inline-block;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 0.8rem;
   text-align: center;
+}
+@media screen and (min-width: 150px) {
+  #skills figure {
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 540px) {
+  #skills figure {
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #skills figure {
+    padding: 0.5rem 0.8rem;
+    color: #000;
+  }
+}
+@media screen and (min-width: 1126px) {
+  #skills figure {
+    padding: 1rem 4rem;
+    color: #000;
+  }
 }
 #skills figure:hover {
   font-size: 1.1rem;
