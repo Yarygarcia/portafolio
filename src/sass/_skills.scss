@@ -75,7 +75,11 @@
         }
         @include pantalla(sm){
             grid-area: me;
+            border: 2px dotted  white;
+            border-top: hidden;
+            border-bottom: hidden;
             margin-right: 0;
+            width: 94.5vw;
             // border-bottom: hidden;
         }
         @include pantalla(md){
@@ -143,18 +147,21 @@
             grid-area: skills;
             background-color: $negro;
             border: 2px dotted  white;
+            border-top: hidden;
+            border-bottom:hidden ;
+            width: 94.5vw;
             margin-left: 0;
             // border-top: hidden;
         }
         @include pantalla(md){
             grid-area: skills;
-            background-color: rgb(143, 55, 55);
+            background-color: rgb(255, 255, 255);
             border: hidden;
             margin-left: 0;
             height: 97vh;
-            width: 30vw;
+            width: 55vw;
             padding-top: 7rem;
-            margin-left: 2rem;
+            margin-left: 8rem;
         }
         @include pantalla(lg){
             grid-area: skills;
@@ -185,23 +192,25 @@
             font-size: .9rem;
         }
         @include pantalla(sm){
-            padding: 0.5rem 0.5rem;
+            padding: 1.5rem 1rem;
             color: #fff;
-            font-size: .7rem;
+            font-size: 1rem;
         }
         @include pantalla(md){
-            padding: 2rem 1.8rem;
+            padding: 2rem 1rem;
             // width: 10rem;
             color: #000;
-            font-size: 1.8rem;
+            font-size: 1.3rem;
         }
         @include pantalla(lg){
             padding: 0.5rem 0.8rem;
             color: #000;
+            font-size: 1.3rem;
         };
         @include pantalla(xl){
             padding: 1rem 4rem;
             color: #000;
+            font-size: 1.3rem;
         }
     }
     figure:hover{
@@ -213,13 +222,13 @@
             font-size: 1.1rem;
         }
         @include pantalla(md){
-            font-size: 2rem;
+            font-size: 1.4rem;
         }
         @include pantalla(lg){
-            font-size: 1.1rem;
+            font-size: 1.4rem;
         };
         @include pantalla(xl){
-            font-size: 1.1rem;
+            font-size: 1.4rem;
         }
     }
 }

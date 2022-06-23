@@ -185,7 +185,7 @@ nav {
 @media screen and (min-width: 540px) {
   nav {
     padding-top: 0.4rem;
-    width: 89vw;
+    width: 94.7vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -195,13 +195,13 @@ nav {
 }
 @media screen and (min-width: 1024px) {
   nav {
-    width: 94vw;
+    width: 96.9vw;
   }
 }
 @media screen and (min-width: 1126px) {
   nav {
     padding-top: 0.5rem;
-    width: 95.7vw;
+    width: 96.6vw;
   }
 }
 nav ul {
@@ -270,8 +270,9 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 
 #contenedor {
   border-radius: 10px;
-  border: 2px double black;
+  border: 2px double rgb(0, 0, 0);
   margin: 10px;
+  overflow: hidden;
 }
 @media screen and (min-width: 150px) {
   #contenedor {
@@ -356,6 +357,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 @media screen and (min-width: 540px) {
   #contenedor #home .me {
     grid-area: me;
+    width: 94.5vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -529,16 +531,37 @@ footer {
 }
 @media screen and (min-width: 150px) {
   footer {
-    height: 5vh;
+    border-top: 2px dotted white;
+    height: 6vh;
+  }
+}
+@media screen and (min-width: 540px) {
+  footer {
+    border-top: 2px dotted white;
+    height: 7vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    border-top: 2px dotted rgb(2, 2, 2);
+    height: 10vh;
+    border-bottom: 2px solid #020202;
+    border-radius: 0 0 6px 6px;
   }
 }
 @media screen and (min-width: 1024px) {
   footer {
+    border-top: 2px dotted rgb(0, 0, 0);
     height: 12vh;
+    border-bottom: 2px solid #020202;
+    border-radius: 0 0 6px 6px;
   }
 }
 @media screen and (min-width: 1126px) {
   footer {
+    border-top: 2px dotted rgb(0, 0, 0);
+    border-bottom: 2px solid #020202;
+    border-radius: 0 0 6px 6px;
     height: 12vh;
   }
 }
@@ -733,7 +756,7 @@ nav {
 @media screen and (min-width: 540px) {
   nav {
     padding-top: 0.4rem;
-    width: 89vw;
+    width: 94.7vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -743,13 +766,13 @@ nav {
 }
 @media screen and (min-width: 1024px) {
   nav {
-    width: 94vw;
+    width: 96.9vw;
   }
 }
 @media screen and (min-width: 1126px) {
   nav {
     padding-top: 0.5rem;
-    width: 95.7vw;
+    width: 96.6vw;
   }
 }
 nav ul {
@@ -818,8 +841,9 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 
 #contenedor {
   border-radius: 10px;
-  border: 2px double black;
+  border: 2px double rgb(0, 0, 0);
   margin: 10px;
+  overflow: hidden;
 }
 @media screen and (min-width: 150px) {
   #contenedor {
@@ -904,6 +928,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 @media screen and (min-width: 540px) {
   #contenedor #home .me {
     grid-area: me;
+    width: 94.5vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1077,16 +1102,37 @@ footer {
 }
 @media screen and (min-width: 150px) {
   footer {
-    height: 5vh;
+    border-top: 2px dotted white;
+    height: 6vh;
+  }
+}
+@media screen and (min-width: 540px) {
+  footer {
+    border-top: 2px dotted white;
+    height: 7vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    border-top: 2px dotted rgb(2, 2, 2);
+    height: 10vh;
+    border-bottom: 2px solid #020202;
+    border-radius: 0 0 6px 6px;
   }
 }
 @media screen and (min-width: 1024px) {
   footer {
+    border-top: 2px dotted rgb(0, 0, 0);
     height: 12vh;
+    border-bottom: 2px solid #020202;
+    border-radius: 0 0 6px 6px;
   }
 }
 @media screen and (min-width: 1126px) {
   footer {
+    border-top: 2px dotted rgb(0, 0, 0);
+    border-bottom: 2px solid #020202;
+    border-radius: 0 0 6px 6px;
     height: 12vh;
   }
 }
@@ -1170,7 +1216,11 @@ footer a:hover {
 @media screen and (min-width: 540px) {
   #skills .me {
     grid-area: me;
+    border: 2px dotted white;
+    border-top: hidden;
+    border-bottom: hidden;
     margin-right: 0;
+    width: 94.5vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1239,19 +1289,22 @@ footer a:hover {
     grid-area: skills;
     background-color: #2b2b2b;
     border: 2px dotted white;
+    border-top: hidden;
+    border-bottom: hidden;
+    width: 94.5vw;
     margin-left: 0;
   }
 }
 @media screen and (min-width: 768px) {
   #skills .icons {
     grid-area: skills;
-    background-color: rgb(143, 55, 55);
+    background-color: rgb(255, 255, 255);
     border: hidden;
     margin-left: 0;
     height: 97vh;
-    width: 30vw;
+    width: 55vw;
     padding-top: 7rem;
-    margin-left: 2rem;
+    margin-left: 8rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1290,28 +1343,30 @@ footer a:hover {
 }
 @media screen and (min-width: 540px) {
   #skills figure {
-    padding: 0.5rem 0.5rem;
+    padding: 1.5rem 1rem;
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
   #skills figure {
-    padding: 2rem 1.8rem;
+    padding: 2rem 1rem;
     color: #000;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #skills figure {
     padding: 0.5rem 0.8rem;
     color: #000;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1126px) {
   #skills figure {
     padding: 1rem 4rem;
     color: #000;
+    font-size: 1.3rem;
   }
 }
 #skills figure:hover {
@@ -1329,17 +1384,17 @@ footer a:hover {
 }
 @media screen and (min-width: 768px) {
   #skills figure:hover {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #skills figure:hover {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 1126px) {
   #skills figure:hover {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 }
 

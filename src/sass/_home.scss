@@ -64,17 +64,17 @@ header {
         }
         @include pantalla(sm){
             padding-top: .4rem;
-            width: 89vw;
+            width: 94.7vw;
         };
         @include pantalla(md){
             width: 96.5vw;
         }
         @include pantalla(lg){
-            width: 94vw;
+            width: 96.9vw;
         };
         @include pantalla(xl){
             padding-top:.5rem;
-            width: 95.7vw;
+            width: 96.6vw;
         }
         ul{ 
             display: flex;
@@ -132,8 +132,9 @@ header {
     }
     #contenedor{
         border-radius: 10px;
-        border: 2px double black;
+        border: 2px double rgb(0, 0, 0);
         margin: 10px;
+        overflow: hidden;
         @include pantalla(xs){
             background-color: $negro; //Mientras
             border-bottom: 2px dotted  white;
@@ -226,6 +227,7 @@ header {
                 }
                 @include pantalla(sm){
                     grid-area: me;
+                    width: 94.5vw;
                 }
                 @include pantalla(md){
                     grid-area: me;
@@ -388,14 +390,29 @@ header {
         text-align: center;
         align-items: end;
         @include pantalla(xs){
-            height: 5vh;
+            border-top: 2px dotted  white;
+            height: 6vh;
         }
         @include pantalla(sm){
+            border-top: 2px dotted  white;
+            height: 7vh;
+        }
+        @include pantalla(md){
+            border-top: 2px dotted  rgb(2, 2, 2);
+            height: 10vh;
+            border-bottom: 2px solid #020202;
+            border-radius: 0 0 6px 6px ;
         }
         @include pantalla(lg){
-            height: 12vh
+            border-top: 2px dotted  rgb(0, 0, 0);
+            height: 12vh;
+            border-bottom: 2px solid #020202;
+            border-radius: 0 0 6px 6px ;
         };
         @include pantalla(xl){
+            border-top: 2px dotted  rgb(0, 0, 0);
+            border-bottom: 2px solid #020202;
+            border-radius: 0 0 6px 6px ;
             height: 12vh;
         }
         a:hover{
