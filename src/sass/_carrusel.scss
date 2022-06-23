@@ -34,12 +34,13 @@
         height: 68vh;
         padding: 0rem 0.6rem;
     }
-    p{
-        color: white;
+    #sobreMi{
+        color: $amarillo;
         font-size: 1.3rem;
-        text-shadow: 0.1rem 0rem 0.3rem white;
+        text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
         text-align: center;
         padding-top: 5px;
+        letter-spacing: 0.7rem;
     }
     .grande{
         z-index: -100;
@@ -210,7 +211,7 @@
         .punto.activo{
             color: rgb(252, 135, 145);
             @include pantalla(xs){
-        
+                
             }
             @include pantalla(sm){
             }
@@ -221,6 +222,7 @@
                 
             }
             @include pantalla(xl){
+                background-color: rgb(252, 135, 145);
                 
             }
         }

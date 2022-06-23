@@ -59,12 +59,13 @@
     padding: 0rem 0.6rem;
   }
 }
-.carrusel p {
-  color: white;
+.carrusel #sobreMi {
+  color: rgb(248, 255, 153);
   font-size: 1.3rem;
-  text-shadow: 0.1rem 0rem 0.3rem white;
+  text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
   text-align: center;
   padding-top: 5px;
+  letter-spacing: 0.7rem;
 }
 .carrusel .grande {
   z-index: -100;
@@ -156,6 +157,12 @@
 .carrusel .puntos .punto.activo {
   color: rgb(252, 135, 145);
 }
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos .punto.activo {
+    background-color: rgb(252, 135, 145);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -673,12 +680,13 @@ footer a:hover {
     padding: 0rem 0.6rem;
   }
 }
-.carrusel p {
-  color: white;
+.carrusel #sobreMi {
+  color: rgb(248, 255, 153);
   font-size: 1.3rem;
-  text-shadow: 0.1rem 0rem 0.3rem white;
+  text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
   text-align: center;
   padding-top: 5px;
+  letter-spacing: 0.7rem;
 }
 .carrusel .grande {
   z-index: -100;
@@ -770,6 +778,12 @@ footer a:hover {
 .carrusel .puntos .punto.activo {
   color: rgb(252, 135, 145);
 }
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos .punto.activo {
+    background-color: rgb(252, 135, 145);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1530,12 +1544,13 @@ footer a:hover {
     padding: 0rem 0.6rem;
   }
 }
-.carrusel p {
-  color: white;
+.carrusel #sobreMi {
+  color: rgb(248, 255, 153);
   font-size: 1.3rem;
-  text-shadow: 0.1rem 0rem 0.3rem white;
+  text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
   text-align: center;
   padding-top: 5px;
+  letter-spacing: 0.7rem;
 }
 .carrusel .grande {
   z-index: -100;
@@ -1627,6 +1642,12 @@ footer a:hover {
 .carrusel .puntos .punto.activo {
   color: rgb(252, 135, 145);
 }
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos .punto.activo {
+    background-color: rgb(252, 135, 145);
+  }
+}
+
 :root {
   --negro: #393939;
   --blanco: #fffd70;
