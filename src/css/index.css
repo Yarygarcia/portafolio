@@ -137,7 +137,7 @@ header {
   margin: 0;
   padding: 0;
   width: 97vw;
-  height: 7vh;
+  height: 55px;
   background: rgb(248, 255, 153);
   border-radius: 17px 17px 0px 0px;
   border: 2px solid rgb(63, 63, 63);
@@ -166,6 +166,7 @@ nav {
 }
 @media screen and (min-width: 150px) {
   nav {
+    height: 75px;
     padding-top: 2rem;
     width: 92.5%;
   }
@@ -607,7 +608,7 @@ header {
   margin: 0;
   padding: 0;
   width: 97vw;
-  height: 7vh;
+  height: 55px;
   background: rgb(248, 255, 153);
   border-radius: 17px 17px 0px 0px;
   border: 2px solid rgb(63, 63, 63);
@@ -636,6 +637,7 @@ nav {
 }
 @media screen and (min-width: 150px) {
   nav {
+    height: 75px;
     padding-top: 2rem;
     width: 92.5%;
   }
