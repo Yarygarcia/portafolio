@@ -1,8 +1,8 @@
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -10,9 +10,9 @@
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -20,9 +20,9 @@
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -30,9 +30,9 @@
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -40,52 +40,85 @@
 /* Las adaptamos al modo oscuro */
 .carrusel {
   grid-area: main;
-  width: 60%;
   max-width: 120em;
-  height: 68vh;
+  height: 80vh;
   padding: 0rem;
   border-radius: 1rem;
   background-color: #2b2b2b;
-  width: 70%;
+  width: 60%;
   max-width: 120em;
-  padding: 3em 2em 0.5;
   height: 63vh;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  border: 1px solid black;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+}
+@media screen and (min-width: 1126px) {
+  .carrusel {
+    height: 68vh;
+    padding: 0rem 0.6rem;
+  }
+}
+.carrusel p {
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 0.1rem 0rem 0.3rem white;
+  text-align: center;
+  padding-top: 5px;
 }
 .carrusel .grande {
   z-index: -100;
   border-radius: 1rem;
-  background-color: #2b2b2b;
+  background-color: rgb(248, 255, 153);
   width: 200%;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  padding: 1em;
   transition: all 0.5s ease;
   transform: translateX(0%);
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande {
+    height: 50vh;
+    padding: 0rem 2rem;
+  }
+}
+.carrusel .grande #polar {
+  font-size: 1rem;
+  color: #2b2b2b;
+  margin: 0;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  width: 36vw;
+  position: absolute;
+}
+.carrusel .grande #sabrina {
+  font-size: 1rem;
+  height: 2rem;
+  color: #2b2b2b;
+  margin-left: 526px;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  padding-top: 1rem;
+  width: 40vw;
+  position: absolute;
+  line-height: 1rem;
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  object-fit: cover;
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande img {
+    min-height: 43vh;
+    margin-bottom: 1.5rem;
+  }
 }
 .carrusel .puntos {
   width: 100%;
@@ -98,23 +131,31 @@
   align-items: center;
   background-color: rgb(248, 255, 153);
 }
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos {
+    padding: 0;
+    margin: 0.5em 0em;
+  }
+}
 .carrusel .puntos .punto {
   width: 2em;
   height: 2em;
   margin: 1em 1em 0;
   list-style-type: none;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(184, 184, 184);
+  box-shadow: 0.3rem 0.2rem 0.3rem rgb(82, 82, 82);
   border-radius: 1rem;
 }
-.carrusel .puntos .punto.activo {
-  color: rgb(244, 245, 234);
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos .punto {
+    margin: 0.8rem;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
 }
-
+.carrusel .puntos .punto.activo {
+  color: rgb(252, 135, 145);
+}
 * {
   margin: 0;
   padding: 0;
@@ -170,7 +211,7 @@ nav {
   position: fixed;
   display: flex;
   align-items: flex-end;
-  margin-top: 2.3rem;
+  margin-top: 3rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
   z-index: 100;
@@ -416,7 +457,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home .me #me {
-    height: 39vh;
+    height: 42%;
   }
 }
 #contenedor #home .me .text h1 {
@@ -443,7 +484,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home .me .text h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 }
 #contenedor #home .me .text p {
@@ -472,7 +513,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 @media screen and (min-width: 1126px) {
   #contenedor #home .me .text p {
     font-size: 1.2rem;
-    padding-top: 1.4rem;
+    padding-top: 2.4rem;
   }
 }
 #contenedor #home .contenedorCarrusel {
@@ -507,6 +548,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 @media screen and (min-width: 1024px) {
   #contenedor #home .contenedorCarrusel {
     background-color: rgb(255, 255, 255);
+    background-color: transparent;
   }
 }
 @media screen and (min-width: 1126px) {
@@ -518,6 +560,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
     justify-items: center;
     align-content: center;
     justify-content: center;
+    background-color: transparent;
   }
 }
 
@@ -571,9 +614,9 @@ footer a:hover {
 
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -581,9 +624,9 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -591,9 +634,9 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -601,9 +644,9 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -611,52 +654,85 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 .carrusel {
   grid-area: main;
-  width: 60%;
   max-width: 120em;
-  height: 68vh;
+  height: 80vh;
   padding: 0rem;
   border-radius: 1rem;
   background-color: #2b2b2b;
-  width: 70%;
+  width: 60%;
   max-width: 120em;
-  padding: 3em 2em 0.5;
   height: 63vh;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  border: 1px solid black;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+}
+@media screen and (min-width: 1126px) {
+  .carrusel {
+    height: 68vh;
+    padding: 0rem 0.6rem;
+  }
+}
+.carrusel p {
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 0.1rem 0rem 0.3rem white;
+  text-align: center;
+  padding-top: 5px;
 }
 .carrusel .grande {
   z-index: -100;
   border-radius: 1rem;
-  background-color: #2b2b2b;
+  background-color: rgb(248, 255, 153);
   width: 200%;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  padding: 1em;
   transition: all 0.5s ease;
   transform: translateX(0%);
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande {
+    height: 50vh;
+    padding: 0rem 2rem;
+  }
+}
+.carrusel .grande #polar {
+  font-size: 1rem;
+  color: #2b2b2b;
+  margin: 0;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  width: 36vw;
+  position: absolute;
+}
+.carrusel .grande #sabrina {
+  font-size: 1rem;
+  height: 2rem;
+  color: #2b2b2b;
+  margin-left: 526px;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  padding-top: 1rem;
+  width: 40vw;
+  position: absolute;
+  line-height: 1rem;
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  object-fit: cover;
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande img {
+    min-height: 43vh;
+    margin-bottom: 1.5rem;
+  }
 }
 .carrusel .puntos {
   width: 100%;
@@ -669,23 +745,31 @@ footer a:hover {
   align-items: center;
   background-color: rgb(248, 255, 153);
 }
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos {
+    padding: 0;
+    margin: 0.5em 0em;
+  }
+}
 .carrusel .puntos .punto {
   width: 2em;
   height: 2em;
   margin: 1em 1em 0;
   list-style-type: none;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(184, 184, 184);
+  box-shadow: 0.3rem 0.2rem 0.3rem rgb(82, 82, 82);
   border-radius: 1rem;
 }
-.carrusel .puntos .punto.activo {
-  color: rgb(244, 245, 234);
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos .punto {
+    margin: 0.8rem;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
 }
-
+.carrusel .puntos .punto.activo {
+  color: rgb(252, 135, 145);
+}
 * {
   margin: 0;
   padding: 0;
@@ -741,7 +825,7 @@ nav {
   position: fixed;
   display: flex;
   align-items: flex-end;
-  margin-top: 2.3rem;
+  margin-top: 3rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1.5px dotted rgb(34, 34, 34);
   z-index: 100;
@@ -987,7 +1071,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home .me #me {
-    height: 39vh;
+    height: 42%;
   }
 }
 #contenedor #home .me .text h1 {
@@ -1014,7 +1098,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 }
 @media screen and (min-width: 1126px) {
   #contenedor #home .me .text h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 }
 #contenedor #home .me .text p {
@@ -1043,7 +1127,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 @media screen and (min-width: 1126px) {
   #contenedor #home .me .text p {
     font-size: 1.2rem;
-    padding-top: 1.4rem;
+    padding-top: 2.4rem;
   }
 }
 #contenedor #home .contenedorCarrusel {
@@ -1078,6 +1162,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
 @media screen and (min-width: 1024px) {
   #contenedor #home .contenedorCarrusel {
     background-color: rgb(255, 255, 255);
+    background-color: transparent;
   }
 }
 @media screen and (min-width: 1126px) {
@@ -1089,6 +1174,7 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
     justify-items: center;
     align-content: center;
     justify-content: center;
+    background-color: transparent;
   }
 }
 
@@ -1142,9 +1228,9 @@ footer a:hover {
 
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -1261,6 +1347,11 @@ footer a:hover {
     margin: 3rem 1.4rem;
     line-height: 3rem;
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1126px) {
+  #skills .me p {
+    font-size: 1.3rem;
   }
 }
 #skills .icons {
@@ -1400,9 +1491,9 @@ footer a:hover {
 
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -1410,9 +1501,9 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
@@ -1420,52 +1511,85 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 .carrusel {
   grid-area: main;
-  width: 60%;
   max-width: 120em;
-  height: 68vh;
+  height: 80vh;
   padding: 0rem;
   border-radius: 1rem;
   background-color: #2b2b2b;
-  width: 70%;
+  width: 60%;
   max-width: 120em;
-  padding: 3em 2em 0.5;
   height: 63vh;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  border: 1px solid black;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+}
+@media screen and (min-width: 1126px) {
+  .carrusel {
+    height: 68vh;
+    padding: 0rem 0.6rem;
+  }
+}
+.carrusel p {
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 0.1rem 0rem 0.3rem white;
+  text-align: center;
+  padding-top: 5px;
 }
 .carrusel .grande {
   z-index: -100;
   border-radius: 1rem;
-  background-color: #2b2b2b;
+  background-color: rgb(248, 255, 153);
   width: 200%;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  padding: 1em;
   transition: all 0.5s ease;
   transform: translateX(0%);
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande {
+    height: 50vh;
+    padding: 0rem 2rem;
+  }
+}
+.carrusel .grande #polar {
+  font-size: 1rem;
+  color: #2b2b2b;
+  margin: 0;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  width: 36vw;
+  position: absolute;
+}
+.carrusel .grande #sabrina {
+  font-size: 1rem;
+  height: 2rem;
+  color: #2b2b2b;
+  margin-left: 526px;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  padding-top: 1rem;
+  width: 40vw;
+  position: absolute;
+  line-height: 1rem;
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  object-fit: cover;
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande img {
+    min-height: 43vh;
+    margin-bottom: 1.5rem;
+  }
 }
 .carrusel .puntos {
   width: 100%;
@@ -1478,28 +1602,36 @@ footer a:hover {
   align-items: center;
   background-color: rgb(248, 255, 153);
 }
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos {
+    padding: 0;
+    margin: 0.5em 0em;
+  }
+}
 .carrusel .puntos .punto {
   width: 2em;
   height: 2em;
   margin: 1em 1em 0;
   list-style-type: none;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(184, 184, 184);
+  box-shadow: 0.3rem 0.2rem 0.3rem rgb(82, 82, 82);
   border-radius: 1rem;
 }
-.carrusel .puntos .punto.activo {
-  color: rgb(244, 245, 234);
+@media screen and (min-width: 1126px) {
+  .carrusel .puntos .punto {
+    margin: 0.8rem;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
 }
-
+.carrusel .puntos .punto.activo {
+  color: rgb(252, 135, 145);
+}
 :root {
   --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
+  --blanco: #fffd70;
+  --sombra-ppal: #f8e694;
+  --sombra-sec: #faf099;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
 }
