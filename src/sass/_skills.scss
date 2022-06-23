@@ -58,6 +58,7 @@
             height: 15rem;
             width: 92.7vw;
             border: 2px dotted  white;
+            border-top: hidden;
             border-bottom: hidden;
         }
         @include pantalla(sm){
@@ -143,12 +144,14 @@
         padding: 0.5rem 0.8rem;
         text-align: center;
         @include pantalla(xs){
-            padding: 0.5rem 0.8rem;
+            padding: 0.5rem 0.6rem;
             color: #fff;
+            font-size: .9rem;
         }
         @include pantalla(sm){
-            padding: 0.5rem 0.8rem;
+            padding: 0.5rem 0.5rem;
             color: #fff;
+            font-size: .7rem;
         }
         @include pantalla(lg){
             padding: 0.5rem 0.8rem;
@@ -161,5 +164,17 @@
     }
     figure:hover{
         font-size: 1.1rem;
+        @include pantalla(xs){
+            font-size: 1.1rem;
+        }
+        @include pantalla(sm){
+            font-size: 1.1rem;
+        }
+        @include pantalla(lg){
+            font-size: 1.1rem;
+        };
+        @include pantalla(xl){
+            font-size: 1.1rem;
+        }
     }
 }
