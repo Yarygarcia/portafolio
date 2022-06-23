@@ -51,3 +51,10 @@
 		@content;
 	}
 }
+
+
+@mixin altura($alto) {
+	@media screen and (min-height: map-get($alturaPantalla, $alto)) {
+		@content;
+	}
+}

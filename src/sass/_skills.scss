@@ -22,6 +22,17 @@
     @include pantalla(sm){
         // font-size: 0.8rem;
     }
+    @include pantalla(md){
+        // font-size: 0.8rem;
+        padding-top: 0rem ;
+        display: grid;
+        grid-template: repeat(4,25%)/repeat(4,25%);
+        grid-template-areas: 
+        "me skills skills skills"
+        "me skills skills skills"
+        "me skills skills skills"
+        "me skills skills skills";
+    }
     @include pantalla(lg){
         padding-top: 0rem ;
         display: grid;
@@ -60,15 +71,26 @@
             border: 2px dotted  white;
             border-top: hidden;
             border-bottom: hidden;
+            margin-right: 0;
         }
         @include pantalla(sm){
             grid-area: me;
+            margin-right: 0;
+            // border-bottom: hidden;
+        }
+        @include pantalla(md){
+            grid-area: me;
+            height: 97vh;
+            width: 37.9vw;
+            margin-right: 2rem; 
             // border-bottom: hidden;
         }
         @include pantalla(lg){
             grid-area: me;
             height: 97vh;
             width: 23.9vw;
+
+            
         };
         @include pantalla(xl){
             grid-area: me;
@@ -85,6 +107,11 @@
                 
             }
             @include pantalla(sm){
+            }
+            @include pantalla(md){
+                margin:3rem 1.4rem;
+                line-height: 3rem;
+                font-size: 1.5rem;
             }
             @include pantalla(lg){
                 
@@ -119,6 +146,16 @@
             margin-left: 0;
             // border-top: hidden;
         }
+        @include pantalla(md){
+            grid-area: skills;
+            background-color: rgb(143, 55, 55);
+            border: hidden;
+            margin-left: 0;
+            height: 97vh;
+            width: 30vw;
+            padding-top: 7rem;
+            margin-left: 2rem;
+        }
         @include pantalla(lg){
             grid-area: skills;
             background-color: rgb(255, 255, 255);
@@ -127,7 +164,6 @@
             padding-top: 5rem;
             border: 0;
             margin-left: 2rem;
-            
         };
         @include pantalla(xl){
             grid-area: skills;
@@ -153,6 +189,12 @@
             color: #fff;
             font-size: .7rem;
         }
+        @include pantalla(md){
+            padding: 2rem 1.8rem;
+            // width: 10rem;
+            color: #000;
+            font-size: 1.8rem;
+        }
         @include pantalla(lg){
             padding: 0.5rem 0.8rem;
             color: #000;
@@ -169,6 +211,9 @@
         }
         @include pantalla(sm){
             font-size: 1.1rem;
+        }
+        @include pantalla(md){
+            font-size: 2rem;
         }
         @include pantalla(lg){
             font-size: 1.1rem;
