@@ -343,6 +343,12 @@ header {
                 @include pantalla(xs){
                     border: 2px dotted  white;
                     background-color: $negro;
+                    padding-top: 0rem;
+                    grid-area: main;
+                    display: flex;
+                    align-content: start;
+                    justify-content: center;
+                    background-color: transparent; 
                     // grid-area: main;
                     // display: flex;
                     // align-items: start;

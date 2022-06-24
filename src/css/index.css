@@ -40,32 +40,51 @@
 /* Las adaptamos al modo oscuro */
 .carrusel {
   grid-area: main;
-  max-width: 120em;
   height: 80vh;
   padding: 0rem;
   border-radius: 1rem;
   background-color: #2b2b2b;
-  width: 60%;
-  max-width: 120em;
   height: 63vh;
   border: 1px solid black;
   overflow: hidden;
   z-index: 1;
   box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
 }
+@media screen and (min-width: 150px) {
+  .carrusel {
+    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+    background-color: rgb(228, 249, 252);
+    height: 70vh;
+    max-width: 20em;
+    padding: 0rem 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carrusel {
+    background-color: #2b2b2b;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carrusel {
+    background-color: #2b2b2b;
+  }
+}
 @media screen and (min-width: 1126px) {
   .carrusel {
+    background-color: rgb(228, 249, 252);
+    max-width: 35em;
     height: 68vh;
     padding: 0rem 0.6rem;
   }
 }
 .carrusel #sobreMi {
-  color: rgb(248, 255, 153);
   font-size: 1.3rem;
-  text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
   text-align: center;
   padding-top: 5px;
   letter-spacing: 0.7rem;
+  text-shadow: 0.1rem 0rem 0.3rem rgb(100, 100, 100);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 .carrusel .grande {
   z-index: -100;
@@ -80,6 +99,13 @@
   transition: all 0.5s ease;
   transform: translateX(0%);
 }
+@media screen and (min-width: 150px) {
+  .carrusel .grande {
+    height: 52.5vh;
+    padding: 0rem 2rem;
+    border: 1px solid black;
+  }
+}
 @media screen and (min-width: 1126px) {
   .carrusel .grande {
     height: 50vh;
@@ -93,27 +119,55 @@
   display: flex;
   justify-self: end;
   align-self: end;
-  width: 36vw;
   position: absolute;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #polar {
+    width: 65vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #polar {
+    width: 36vw;
+  }
 }
 .carrusel .grande #sabrina {
   font-size: 1rem;
-  height: 2rem;
   color: #2b2b2b;
-  margin-left: 526px;
   display: flex;
   justify-self: end;
   align-self: end;
-  padding-top: 1rem;
   width: 40vw;
   position: absolute;
   line-height: 1rem;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #sabrina {
+    padding-top: 1.5rem;
+    height: 4rem;
+    margin-left: 280px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #sabrina {
+    padding-top: 1rem;
+    height: 2rem;
+    margin-left: 526px;
+    width: 39vw;
+  }
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
   object-fit: cover;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande img {
+    min-height: 40vh;
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (min-width: 1126px) {
   .carrusel .grande img {
@@ -131,6 +185,13 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(248, 255, 153);
+}
+@media screen and (min-width: 150px) {
+  .carrusel .puntos {
+    padding: 1;
+    margin: 0.5em 0em;
+    border: 1px solid rgb(8, 8, 8);
+  }
 }
 @media screen and (min-width: 1126px) {
   .carrusel .puntos {
@@ -155,14 +216,8 @@
   }
 }
 .carrusel .puntos .punto.activo {
-  color: rgb(252, 135, 145);
+  background-color: rgb(252, 135, 145);
 }
-@media screen and (min-width: 1126px) {
-  .carrusel .puntos .punto.activo {
-    background-color: rgb(252, 135, 145);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -531,6 +586,12 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   #contenedor #home .contenedorCarrusel {
     border: 2px dotted white;
     background-color: #2b2b2b;
+    padding-top: 0rem;
+    grid-area: main;
+    display: flex;
+    align-content: start;
+    justify-content: center;
+    background-color: transparent;
   }
 }
 @media screen and (min-width: 540px) {
@@ -661,32 +722,51 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 .carrusel {
   grid-area: main;
-  max-width: 120em;
   height: 80vh;
   padding: 0rem;
   border-radius: 1rem;
   background-color: #2b2b2b;
-  width: 60%;
-  max-width: 120em;
   height: 63vh;
   border: 1px solid black;
   overflow: hidden;
   z-index: 1;
   box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
 }
+@media screen and (min-width: 150px) {
+  .carrusel {
+    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+    background-color: rgb(228, 249, 252);
+    height: 70vh;
+    max-width: 20em;
+    padding: 0rem 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carrusel {
+    background-color: #2b2b2b;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carrusel {
+    background-color: #2b2b2b;
+  }
+}
 @media screen and (min-width: 1126px) {
   .carrusel {
+    background-color: rgb(228, 249, 252);
+    max-width: 35em;
     height: 68vh;
     padding: 0rem 0.6rem;
   }
 }
 .carrusel #sobreMi {
-  color: rgb(248, 255, 153);
   font-size: 1.3rem;
-  text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
   text-align: center;
   padding-top: 5px;
   letter-spacing: 0.7rem;
+  text-shadow: 0.1rem 0rem 0.3rem rgb(100, 100, 100);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 .carrusel .grande {
   z-index: -100;
@@ -701,6 +781,13 @@ footer a:hover {
   transition: all 0.5s ease;
   transform: translateX(0%);
 }
+@media screen and (min-width: 150px) {
+  .carrusel .grande {
+    height: 52.5vh;
+    padding: 0rem 2rem;
+    border: 1px solid black;
+  }
+}
 @media screen and (min-width: 1126px) {
   .carrusel .grande {
     height: 50vh;
@@ -714,27 +801,55 @@ footer a:hover {
   display: flex;
   justify-self: end;
   align-self: end;
-  width: 36vw;
   position: absolute;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #polar {
+    width: 65vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #polar {
+    width: 36vw;
+  }
 }
 .carrusel .grande #sabrina {
   font-size: 1rem;
-  height: 2rem;
   color: #2b2b2b;
-  margin-left: 526px;
   display: flex;
   justify-self: end;
   align-self: end;
-  padding-top: 1rem;
   width: 40vw;
   position: absolute;
   line-height: 1rem;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #sabrina {
+    padding-top: 1.5rem;
+    height: 4rem;
+    margin-left: 280px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #sabrina {
+    padding-top: 1rem;
+    height: 2rem;
+    margin-left: 526px;
+    width: 39vw;
+  }
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
   object-fit: cover;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande img {
+    min-height: 40vh;
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (min-width: 1126px) {
   .carrusel .grande img {
@@ -752,6 +867,13 @@ footer a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgb(248, 255, 153);
+}
+@media screen and (min-width: 150px) {
+  .carrusel .puntos {
+    padding: 1;
+    margin: 0.5em 0em;
+    border: 1px solid rgb(8, 8, 8);
+  }
 }
 @media screen and (min-width: 1126px) {
   .carrusel .puntos {
@@ -776,14 +898,8 @@ footer a:hover {
   }
 }
 .carrusel .puntos .punto.activo {
-  color: rgb(252, 135, 145);
+  background-color: rgb(252, 135, 145);
 }
-@media screen and (min-width: 1126px) {
-  .carrusel .puntos .punto.activo {
-    background-color: rgb(252, 135, 145);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -1152,6 +1268,12 @@ nav ul li a:link, nav ul li a:active, nav ul li a:visited {
   #contenedor #home .contenedorCarrusel {
     border: 2px dotted white;
     background-color: #2b2b2b;
+    padding-top: 0rem;
+    grid-area: main;
+    display: flex;
+    align-content: start;
+    justify-content: center;
+    background-color: transparent;
   }
 }
 @media screen and (min-width: 540px) {
@@ -1525,32 +1647,51 @@ footer a:hover {
 /* Las adaptamos al modo oscuro */
 .carrusel {
   grid-area: main;
-  max-width: 120em;
   height: 80vh;
   padding: 0rem;
   border-radius: 1rem;
   background-color: #2b2b2b;
-  width: 60%;
-  max-width: 120em;
   height: 63vh;
   border: 1px solid black;
   overflow: hidden;
   z-index: 1;
   box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
 }
+@media screen and (min-width: 150px) {
+  .carrusel {
+    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+    background-color: rgb(228, 249, 252);
+    height: 70vh;
+    max-width: 20em;
+    padding: 0rem 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carrusel {
+    background-color: #2b2b2b;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carrusel {
+    background-color: #2b2b2b;
+  }
+}
 @media screen and (min-width: 1126px) {
   .carrusel {
+    background-color: rgb(228, 249, 252);
+    max-width: 35em;
     height: 68vh;
     padding: 0rem 0.6rem;
   }
 }
 .carrusel #sobreMi {
-  color: rgb(248, 255, 153);
   font-size: 1.3rem;
-  text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
   text-align: center;
   padding-top: 5px;
   letter-spacing: 0.7rem;
+  text-shadow: 0.1rem 0rem 0.3rem rgb(100, 100, 100);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 .carrusel .grande {
   z-index: -100;
@@ -1565,6 +1706,13 @@ footer a:hover {
   transition: all 0.5s ease;
   transform: translateX(0%);
 }
+@media screen and (min-width: 150px) {
+  .carrusel .grande {
+    height: 52.5vh;
+    padding: 0rem 2rem;
+    border: 1px solid black;
+  }
+}
 @media screen and (min-width: 1126px) {
   .carrusel .grande {
     height: 50vh;
@@ -1578,27 +1726,55 @@ footer a:hover {
   display: flex;
   justify-self: end;
   align-self: end;
-  width: 36vw;
   position: absolute;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #polar {
+    width: 65vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #polar {
+    width: 36vw;
+  }
 }
 .carrusel .grande #sabrina {
   font-size: 1rem;
-  height: 2rem;
   color: #2b2b2b;
-  margin-left: 526px;
   display: flex;
   justify-self: end;
   align-self: end;
-  padding-top: 1rem;
   width: 40vw;
   position: absolute;
   line-height: 1rem;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #sabrina {
+    padding-top: 1.5rem;
+    height: 4rem;
+    margin-left: 280px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #sabrina {
+    padding-top: 1rem;
+    height: 2rem;
+    margin-left: 526px;
+    width: 39vw;
+  }
 }
 .carrusel .grande img {
   width: calc(50% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
   object-fit: cover;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande img {
+    min-height: 40vh;
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (min-width: 1126px) {
   .carrusel .grande img {
@@ -1616,6 +1792,13 @@ footer a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgb(248, 255, 153);
+}
+@media screen and (min-width: 150px) {
+  .carrusel .puntos {
+    padding: 1;
+    margin: 0.5em 0em;
+    border: 1px solid rgb(8, 8, 8);
+  }
 }
 @media screen and (min-width: 1126px) {
   .carrusel .puntos {
@@ -1640,14 +1823,8 @@ footer a:hover {
   }
 }
 .carrusel .puntos .punto.activo {
-  color: rgb(252, 135, 145);
+  background-color: rgb(252, 135, 145);
 }
-@media screen and (min-width: 1126px) {
-  .carrusel .puntos .punto.activo {
-    background-color: rgb(252, 135, 145);
-  }
-}
-
 :root {
   --negro: #393939;
   --blanco: #fffd70;
