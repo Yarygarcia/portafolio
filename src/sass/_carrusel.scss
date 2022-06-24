@@ -176,6 +176,7 @@
             min-height: 40vh;
             border-radius: 1rem;
             object-fit: cover;
+            // border: 1px solid rgb(10, 10, 10);
             // @include neo( 1 , 1em , 1em );
             @include pantalla(xs){
                 min-height: 40vh;
