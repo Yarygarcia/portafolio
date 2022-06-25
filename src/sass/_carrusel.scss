@@ -4,21 +4,15 @@
     height: 80vh;
     padding: 0rem;
     border-radius: 1rem;
-    // overflow: hidden;
     background-color: $negro;
-    // width:60%;
-    // padding: 3em 2em 0.5;
     height: 63vh;
     border: 1px solid black;
-    // @include neo( 1 , 1em , 1em );
     overflow: hidden;
     z-index: 1;
-    // border-top: 1px solid rgb(255, 238, 1);
-    // border-bottom: 1px solid rgb(255, 238, 1);
-    box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+    background-color: rgb(228, 249, 252);
+    // @include neo( 1 , 1em , 1em );
     @include pantalla(xs){
-        box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
-        background-color: rgb(228, 249, 252);
         height: 70vh;
         max-width: 20em;
         padding: 0rem 0.6rem;
@@ -26,15 +20,10 @@
     @include pantalla(sm){
     }
     @include pantalla(md){
-        background-color: $negro;
-        
     }
     @include pantalla(lg){
-        background-color: $negro;
-        
     }
     @include pantalla(xl){
-        background-color: rgb(228, 249, 252);
         max-width: 35em;
         height: 68vh;
         padding: 0rem 0.6rem;
@@ -59,44 +48,25 @@
             
         }
         @include pantalla(xl){
-            // color: white;
-            // text-shadow: 0.1rem 0rem 0.3rem rgb(248, 243, 201);
-            
         }
     }
     .grande{
         z-index: -100;
         border-radius: 1rem;
         background-color: $amarillo;
-        width: 200%;
-        // width: 200%;
-        // height:53vh;
-        // display: flex;
-        // flex-flow: row nowrap;
-        // justify-content: space-between;
-        // align-items: center;
-        // padding:  1em;
-        // border-top: 1px solid black;
-        // box-shadow: 1em 1em 1em rgba(255, 255, 255, 0.945);
-        // background-color: rgb(238, 238, 238);
-        // border-radius: 0.5rem;
-        // transition: all .5s ease;
-        // transform: translateX(0%) ;
+        width:300%;
         height: 50vh;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         // @include neo( 1 , 1em , 1em );
-        // padding:1em;
-        
         transition: all .5s ease;
         transform: translateX(0%);
         @include pantalla(xs){
             height: 52.5vh;
             padding: 0rem 2rem;
             border: 1px solid black;
-        
         }
         @include pantalla(sm){
         }
@@ -165,6 +135,38 @@
                 width: 39vw;
             }
         }
+        #programming{
+            font-size: 1rem;
+            color: $negro;
+            display: flex;
+            justify-self:end;
+            align-self: end;
+            width: 40vw;
+            position: absolute;
+            line-height: 1rem;
+            @include pantalla(xs){
+                padding-top: 1.5rem;
+                height: 4rem;
+                margin-left:280px;
+                width: 70vw;
+                
+            }
+            @include pantalla(sm){
+            }
+            @include pantalla(md){
+                
+            }
+            @include pantalla(lg){
+                
+            }
+            @include pantalla(xl){
+                padding-top: 1rem;
+                height: 2rem;
+                margin-left:1055px;
+                width: 39vw;
+            }
+
+        }
         img{
             // width: calc(100%/2);
             // min-height: 46vh;
@@ -172,7 +174,8 @@
             // box-shadow: 1em 1em 0.5em rgba(255, 255, 255, 0.945);
             // background-color:rgb(241, 241, 241);
             // border-radius: 0.5rem;
-            width: calc( 100% / 2  - 2em);
+            border: 1px solid black;
+            width: calc( 100% / 3 - 2em);
             min-height: 40vh;
             border-radius: 1rem;
             object-fit: cover;
@@ -219,7 +222,7 @@
         background-color: $amarillo;
         // padding: .1em;ç
         @include pantalla(xs){
-            padding: 1;
+            // padding: 1;
             margin:0.5em 0em;
             border: 1px solid rgb(8, 8, 8);
         

@@ -48,30 +48,18 @@
   border: 1px solid black;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+  box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+  background-color: rgb(228, 249, 252);
 }
 @media screen and (min-width: 150px) {
   .carrusel {
-    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
-    background-color: rgb(228, 249, 252);
     height: 70vh;
     max-width: 20em;
     padding: 0rem 0.6rem;
   }
 }
-@media screen and (min-width: 768px) {
-  .carrusel {
-    background-color: #2b2b2b;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .carrusel {
-    background-color: #2b2b2b;
-  }
-}
 @media screen and (min-width: 1126px) {
   .carrusel {
-    background-color: rgb(228, 249, 252);
     max-width: 35em;
     height: 68vh;
     padding: 0rem 0.6rem;
@@ -90,7 +78,7 @@
   z-index: -100;
   border-radius: 1rem;
   background-color: rgb(248, 255, 153);
-  width: 200%;
+  width: 300%;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
@@ -157,8 +145,35 @@
     width: 39vw;
   }
 }
+.carrusel .grande #programming {
+  font-size: 1rem;
+  color: #2b2b2b;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  width: 40vw;
+  position: absolute;
+  line-height: 1rem;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #programming {
+    padding-top: 1.5rem;
+    height: 4rem;
+    margin-left: 280px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #programming {
+    padding-top: 1rem;
+    height: 2rem;
+    margin-left: 1055px;
+    width: 39vw;
+  }
+}
 .carrusel .grande img {
-  width: calc(50% - 2em);
+  border: 1px solid black;
+  width: calc(33.3333333333% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
   object-fit: cover;
@@ -188,7 +203,6 @@
 }
 @media screen and (min-width: 150px) {
   .carrusel .puntos {
-    padding: 1;
     margin: 0.5em 0em;
     border: 1px solid rgb(8, 8, 8);
   }
@@ -730,30 +744,18 @@ footer a:hover {
   border: 1px solid black;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+  box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+  background-color: rgb(228, 249, 252);
 }
 @media screen and (min-width: 150px) {
   .carrusel {
-    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
-    background-color: rgb(228, 249, 252);
     height: 70vh;
     max-width: 20em;
     padding: 0rem 0.6rem;
   }
 }
-@media screen and (min-width: 768px) {
-  .carrusel {
-    background-color: #2b2b2b;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .carrusel {
-    background-color: #2b2b2b;
-  }
-}
 @media screen and (min-width: 1126px) {
   .carrusel {
-    background-color: rgb(228, 249, 252);
     max-width: 35em;
     height: 68vh;
     padding: 0rem 0.6rem;
@@ -772,7 +774,7 @@ footer a:hover {
   z-index: -100;
   border-radius: 1rem;
   background-color: rgb(248, 255, 153);
-  width: 200%;
+  width: 300%;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
@@ -839,8 +841,35 @@ footer a:hover {
     width: 39vw;
   }
 }
+.carrusel .grande #programming {
+  font-size: 1rem;
+  color: #2b2b2b;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  width: 40vw;
+  position: absolute;
+  line-height: 1rem;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #programming {
+    padding-top: 1.5rem;
+    height: 4rem;
+    margin-left: 280px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #programming {
+    padding-top: 1rem;
+    height: 2rem;
+    margin-left: 1055px;
+    width: 39vw;
+  }
+}
 .carrusel .grande img {
-  width: calc(50% - 2em);
+  border: 1px solid black;
+  width: calc(33.3333333333% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
   object-fit: cover;
@@ -870,7 +899,6 @@ footer a:hover {
 }
 @media screen and (min-width: 150px) {
   .carrusel .puntos {
-    padding: 1;
     margin: 0.5em 0em;
     border: 1px solid rgb(8, 8, 8);
   }
@@ -1655,30 +1683,18 @@ footer a:hover {
   border: 1px solid black;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0.8em 0.8em 0.2em rgba(161, 161, 161, 0.945);
+  box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
+  background-color: rgb(228, 249, 252);
 }
 @media screen and (min-width: 150px) {
   .carrusel {
-    box-shadow: 0.8em 0.8em 0.2em rgba(248, 202, 244, 0.945);
-    background-color: rgb(228, 249, 252);
     height: 70vh;
     max-width: 20em;
     padding: 0rem 0.6rem;
   }
 }
-@media screen and (min-width: 768px) {
-  .carrusel {
-    background-color: #2b2b2b;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .carrusel {
-    background-color: #2b2b2b;
-  }
-}
 @media screen and (min-width: 1126px) {
   .carrusel {
-    background-color: rgb(228, 249, 252);
     max-width: 35em;
     height: 68vh;
     padding: 0rem 0.6rem;
@@ -1697,7 +1713,7 @@ footer a:hover {
   z-index: -100;
   border-radius: 1rem;
   background-color: rgb(248, 255, 153);
-  width: 200%;
+  width: 300%;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
@@ -1764,8 +1780,35 @@ footer a:hover {
     width: 39vw;
   }
 }
+.carrusel .grande #programming {
+  font-size: 1rem;
+  color: #2b2b2b;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  width: 40vw;
+  position: absolute;
+  line-height: 1rem;
+}
+@media screen and (min-width: 150px) {
+  .carrusel .grande #programming {
+    padding-top: 1.5rem;
+    height: 4rem;
+    margin-left: 280px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1126px) {
+  .carrusel .grande #programming {
+    padding-top: 1rem;
+    height: 2rem;
+    margin-left: 1055px;
+    width: 39vw;
+  }
+}
 .carrusel .grande img {
-  width: calc(50% - 2em);
+  border: 1px solid black;
+  width: calc(33.3333333333% - 2em);
   min-height: 40vh;
   border-radius: 1rem;
   object-fit: cover;
@@ -1795,7 +1838,6 @@ footer a:hover {
 }
 @media screen and (min-width: 150px) {
   .carrusel .puntos {
-    padding: 1;
     margin: 0.5em 0em;
     border: 1px solid rgb(8, 8, 8);
   }
